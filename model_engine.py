@@ -66,18 +66,16 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
     raw_avg = (valid_df.head(5)[stat].mean() * 0.60) + (l10[stat].mean() * 0.40)
     baseline = (rate_proj * 0.60) + (raw_avg * 0.40)
 
-    # Tracking Opportunity Blend (Rebound Chances & Potential Assists)
+    # Tracking Opportunity Blend
     t_row = track_df[track_df["PLAYER_NAME"] == player_name]
     opp_volume_note = ""
     if not t_row.empty:
         tr = t_row.squeeze()
         if stat == "REB" and tr["REB_CHANCES"] > 0:
-            # League average conversion is ~56% of rebound chances
             expected_reb = tr["REB_CHANCES"] * 0.56
             baseline = (baseline * 0.70) + (expected_reb * 0.30)
             opp_volume_note = f"{tr['REB_CHANCES']:.1f} Reb Chances/g"
         elif stat == "AST" and tr["POTENTIAL_AST"] > 0:
-            # League average conversion is ~52% of potential assists
             expected_ast = tr["POTENTIAL_AST"] * 0.52
             baseline = (baseline * 0.70) + (expected_ast * 0.30)
             opp_volume_note = f"{tr['POTENTIAL_AST']:.1f} Pot Ast/g"
@@ -85,7 +83,7 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
     # Home vs. Away Split
     split_df = valid_df[valid_df["MATCHUP"].str.contains("vs." if is_home else "@", na=False)]
     if len(split_df) >= 3:
-        baseline = (baseline * 0.75) + (split_df[stat].mean() * 0.25)
+        baseline = (baseline * 0.80) + (split_df[stat].mean() * 0.20)
 
     # Head-to-Head History
     opp_abbr = full_to_abbr.get(opp_name, "")
@@ -94,35 +92,35 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
         if len(h2h_df) >= 1:
             baseline = (baseline * 0.85) + (h2h_df[stat].mean() * 0.15)
 
-    # Team Pace & Stat Defense
-    opp_row = teams_df[teams_df["TEAM_NAME"] == opp_name]
-    if opp_row.empty:
-        team_matchup_factor = 1.0
-    else:
-        opp_stats = opp_row.squeeze()
-        pace_ratio = opp_stats["PACE"] / teams_df["PACE"].mean()
-        if stat == "PTS":
-            stat_ratio = opp_stats["OPP_PTS"] / teams_df["OPP_PTS"].mean()
-        elif stat == "REB":
-            stat_ratio = opp_stats["OPP_REB"] / teams_df["OPP_REB"].mean()
-        else:
-            stat_ratio = opp_stats["OPP_AST"] / teams_df["OPP_AST"].mean()
-        team_matchup_factor = 1 + ((pace_ratio - 1) * 0.35) + ((stat_ratio - 1) * 0.30)
+    # Additive & Capped Matchup Adjustments (Prevents compounding inflation)
+    adj_pct = 0.0
 
-    # DvP Factor
+    opp_row = teams_df[teams_df["TEAM_NAME"] == opp_name]
+    if not opp_row.empty:
+        opp_stats = opp_row.squeeze()
+        pace_diff = (opp_stats["PACE"] / teams_df["PACE"].mean()) - 1.0
+        if stat == "PTS":
+            stat_diff = (opp_stats["OPP_PTS"] / teams_df["OPP_PTS"].mean()) - 1.0
+        elif stat == "REB":
+            stat_diff = (opp_stats["OPP_REB"] / teams_df["OPP_REB"].mean()) - 1.0
+        else:
+            stat_diff = (opp_stats["OPP_AST"] / teams_df["OPP_AST"].mean()) - 1.0
+        adj_pct += (pace_diff * 0.30) + (stat_diff * 0.25)
+
+    # DvP Adjustment
     dvp_row = dvp_table[(dvp_table["OPP_ABBR"] == opp_abbr) & (dvp_table["POS"] == player_pos)]
     if dvp_row.empty:
-        dvp_factor, dvp_label = 1.0, "Neutral"
+        dvp_label = "Neutral"
     else:
         r = dvp_row.squeeze()
         lg_rate = r[f"LG_{stat}_PER_MIN"]
         ratio = r[f"{stat}_PER_MIN"] / lg_rate if lg_rate > 0 else 1.0
-        dvp_factor = 1 + ((ratio - 1) * 0.55)
+        adj_pct += (ratio - 1.0) * 0.35
         dvp_label = f"{(ratio - 1)*100:+.1f}% vs {player_pos}"
 
-    # Shot Zone Factor (for PTS)
+    # Shot Zone Adjustment (for PTS)
     p_shot = shot_df[shot_df["PLAYER_NAME"] == player_name]
-    shot_factor, shot_label = 1.0, "Standard"
+    shot_label = "Standard"
     if not p_shot.empty and not opp_row.empty:
         ps = p_shot.squeeze()
         os = opp_row.squeeze()
@@ -139,24 +137,32 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
             ratio_2 = os["OPP_FG2M"] / teams_df["OPP_FG2M"].mean()
             total_fg = pct_3 + pct_2
             w_ratio = ((pct_3 * ratio_3) + (pct_2 * ratio_2)) / total_fg if total_fg > 0 else 1.0
-            shot_factor = 1 + ((w_ratio - 1) * 0.65)
+            adj_pct += (w_ratio - 1.0) * 0.40
             shot_label = f"{style} [{(w_ratio - 1)*100:+.1f}%]"
         else:
             shot_label = opp_volume_note if opp_volume_note else style
 
     # Vegas Total, Blowout, & B2B Rest
-    total_factor = 1 + ((game_total - 226.0) / 226.0) * 0.45
-    blowout_factor = 0.96 if spread >= 13.5 else 1.0
+    adj_pct += ((game_total - 226.0) / 226.0) * 0.35
+    if spread >= 13.5:
+        adj_pct -= 0.035
     latest_game_date = p_df["GAME_DATE"].max().date()
     is_b2b = ((datetime.now().date() - latest_game_date).days == 1)
-    b2b_factor = 0.97 if is_b2b else 1.0
+    if is_b2b:
+        adj_pct -= 0.025
 
-    final_proj = baseline * team_matchup_factor * dvp_factor * shot_factor * total_factor * blowout_factor * b2b_factor
+    # Cap total matchup swing at +/- 15%
+    adj_pct = max(-0.15, min(0.15, adj_pct))
+    raw_model_proj = baseline * (1.0 + adj_pct)
 
-    # True Win Probability % using L10 Standard Deviation
-    std_dev = l10[stat].std()
-    if pd.isna(std_dev) or std_dev < 1.5:
-        std_dev = max(1.5, final_proj * 0.22)
+    # Market-Aware Shrinkage: Anchor 25% to sportsbook line to prevent outlier inflation
+    final_proj = (raw_model_proj * 0.75) + (line * 0.25)
+
+    # Full-Season Volatility with Realistic NBA Floors
+    min_std_floors = {"PTS": 5.5, "REB": 2.6, "AST": 2.1}
+    season_std = valid_df[stat].std()
+    floor_std = max(min_std_floors.get(stat, 2.5), line * 0.24)
+    std_dev = floor_std if pd.isna(season_std) else max(season_std, floor_std)
 
     z_score = (final_proj - line) / std_dev
     prob_over = norm_cdf(z_score)
@@ -167,5 +173,7 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
         lean = "UNDER"
         win_prob = (1.0 - prob_over) * 100
 
+    # Cap displayed probability at 72% (realistic ceiling for NBA player props)
+    win_prob = min(72.0, win_prob)
     pct_edge = ((final_proj - line) / line) * 100 if line > 0 else 0
     return final_proj, lean, win_prob, pct_edge, is_b2b, round(proj_min, 1), player_pos, dvp_label, shot_label
