@@ -7,9 +7,10 @@ with open("/Users/rasheedwhiters/nba_project/.streamlit/secrets.toml", "rb") as 
 API_KEY = secrets["ODDS_API_KEY"].strip()
 
 s = chr(47)
-host = "https:" + s + s + "://the-odds-api.com"
+domain = ".".join(["api", "the-odds-api", "com"])
+host = "https:" + s + s + domain
 
-# 1. Fetch Game Lines (Spreads & Totals) in 1 single call
+# 1. Fetch Game Lines (Spreads & Totals)
 game_odds_url = s.join([host, "v4", "sports", "basketball_nba", "odds"])
 g_resp = requests.get(game_odds_url, params={
     "apiKey": API_KEY,
@@ -26,7 +27,7 @@ if g_resp.status_code == 200:
         for book in game.get("bookmakers", []):
             for m in book.get("markets", []):
                 if m["key"] == "totals" and m["outcomes"]:
-                    total_val = m["outcomes"]["point"]
+                    total_val = next(iter(m["outcomes"]))["point"]
                 elif m["key"] == "spreads" and m["outcomes"]:
                     for o in m["outcomes"]:
                         if o["name"] == game["home_team"]:
