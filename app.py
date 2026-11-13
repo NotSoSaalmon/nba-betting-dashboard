@@ -6,11 +6,21 @@ from model_engine import load_all_data, calculate_projection, team_abbr_map
 st.set_page_config(page_title="NBA Pro Betting Dashboard", layout="wide")
 st.title("🏀 NBA Pro Projection & Win-Probability Edges")
 
-all_players_df, teams_df, shot_df, track_df, dvp_table = load_all_data()
+all_players_df, teams_df, shot_df, track_df, dvp_table, inj_df = load_all_data()
 
-# --- SECTION 1: TOP 15 PICKS (BALANCED ACROSS PTS, REB, AST) ---
+all_names = sorted(all_players_df["PLAYER_NAME"].unique())
+default_out = [p for p in inj_df["PLAYER_NAME"].tolist() if p in all_names]
+
+with st.expander("🚨 Breaking Injury News (Tap to Add Late Scratches & Recalculate Usage)", expanded=False):
+    selected_out = st.multiselect(
+        "Players Ruled OUT Tonight (Boosts Teammate Usage & Removes Out Players):",
+        options=all_names,
+        default=default_out
+    )
+out_players_set = set(selected_out)
+
 st.header("🔥 Top 15 Picks (Top 5 PTS • Top 5 REB • Top 5 AST)")
-st.caption("Balanced across Points, Rebounds & Assists • Ranked by True Win Probability %")
+st.caption("Factors in: Teammate Injury Usage Spikes • Potential Ast & Reb Chances • 3PT/2PT Shot Profile • DvP • Vegas Total & Spread • B2B Rest")
 
 stat_filter = st.radio("Filter Leaderboard by Stat:", ["Balanced Top 15 (5 Each)", "All Combined", "PTS Only", "REB Only", "AST Only"], horizontal=True)
 
@@ -20,6 +30,9 @@ try:
 
     for _, row in odds_df.iterrows():
         p_name = row["PLAYER_NAME"]
+        if p_name in out_players_set:
+            continue
+
         stat = row["STAT"]
         line = row["LINE"]
         p_df = all_players_df[all_players_df["PLAYER_NAME"] == p_name]
@@ -31,9 +44,10 @@ try:
         is_home = (player_team_full == row["HOME_TEAM"])
         opponent = row["AWAY_TEAM"] if is_home else row["HOME_TEAM"]
 
-        proj, lean, win_prob, pct_edge, is_b2b, proj_min, p_pos, dvp_label, fit_label = calculate_projection(
-            p_df, p_name, stat, opponent, line, teams_df, shot_df, track_df, dvp_table,
-            is_home=is_home, game_total=row.get("GAME_TOTAL", 226.0), spread=row.get("SPREAD", 0.0)
+        proj, lean, win_prob, pct_edge, is_b2b, proj_min, p_pos, dvp_label, fit_label, usage_note = calculate_projection(
+            p_df, all_players_df, p_name, stat, opponent, line, teams_df, shot_df, track_df, dvp_table,
+            out_players_set=out_players_set, is_home=is_home,
+            game_total=row.get("GAME_TOTAL", 226.0), spread=row.get("SPREAD", 0.0)
         )
 
         valid_10 = p_df[p_df["MIN"] >= 15].head(10)
@@ -49,7 +63,7 @@ try:
             "Model Proj": round(proj, 1),
             "Win Prob": f"{win_prob:.1f}%",
             "_sort_prob": win_prob,
-            "Edge %": f"{abs(pct_edge):.1f}%",
+            "Usage Boost": usage_note if usage_note else "Normal",
             "Matchup / Tracking": fit_label,
             "DvP": dvp_label,
             "Opponent": opponent,
@@ -84,7 +98,6 @@ except FileNotFoundError:
 
 st.divider()
 
-# --- SECTION 2: AUTOMATED WIN-LOSS BACKTEST TRACKER ---
 st.header("📈 Model Track Record (Automated Daily Grading)")
 if os.path.exists("pick_history.csv"):
     hist_df = pd.read_csv("pick_history.csv")

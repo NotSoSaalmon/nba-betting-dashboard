@@ -6,7 +6,8 @@ from model_engine import load_all_data, calculate_projection, team_abbr_map
 BASE = "/Users/rasheedwhiters/nba_project/"
 HISTORY_FILE = f"{BASE}pick_history.csv"
 
-all_players_df, teams_df, shot_df, track_df, dvp_table = load_all_data(BASE)
+all_players_df, teams_df, shot_df, track_df, dvp_table, inj_df = load_all_data(BASE)
+out_players_set = set(inj_df["PLAYER_NAME"].tolist())
 today_str = datetime.now().strftime("%Y-%m-%d")
 
 if os.path.exists(HISTORY_FILE):
@@ -24,7 +25,9 @@ if not hist_df.empty:
             (all_players_df["GAME_DATE"].dt.strftime("%Y-%m-%d") >= row["Date"])
         ]
         if not p_logs.empty:
-            game_row = p_logs.sort_values(by="GAME_DATE", ascending=True).iloc
+            game_row = p_logs.sort_values(by="GAME_DATE", ascending=True).squeeze()
+            if isinstance(game_row, pd.DataFrame):
+                game_row = game_row.head(1).squeeze()
             actual_val = float(game_row[row["Stat"]])
             line = float(row["Book Line"])
             hist_df.at[idx, "Actual"] = actual_val
@@ -40,6 +43,8 @@ if os.path.exists(f"{BASE}live_odds.csv") and today_str not in hist_df["Date"].v
     today_rows = []
     for _, row in odds_df.iterrows():
         p_name = row["PLAYER_NAME"]
+        if p_name in out_players_set:
+            continue
         stat = row["STAT"]
         line = row["LINE"]
         p_df = all_players_df[all_players_df["PLAYER_NAME"] == p_name]
@@ -52,8 +57,9 @@ if os.path.exists(f"{BASE}live_odds.csv") and today_str not in hist_df["Date"].v
         opponent = row["AWAY_TEAM"] if is_home else row["HOME_TEAM"]
 
         proj, lean, win_prob, pct_edge, *_ = calculate_projection(
-            p_df, p_name, stat, opponent, line, teams_df, shot_df, track_df, dvp_table,
-            is_home=is_home, game_total=row.get("GAME_TOTAL", 226.0), spread=row.get("SPREAD", 0.0)
+            p_df, all_players_df, p_name, stat, opponent, line, teams_df, shot_df, track_df, dvp_table,
+            out_players_set=out_players_set, is_home=is_home,
+            game_total=row.get("GAME_TOTAL", 226.0), spread=row.get("SPREAD", 0.0)
         )
         today_rows.append({
             "Date": today_str,

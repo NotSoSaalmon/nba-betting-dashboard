@@ -11,17 +11,18 @@ Landry Shamet,AST,1.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Aaron Nesmith,AST,1.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Jalen Brunson,PTS,25.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Karl-Anthony Towns,PTS,20.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
-Pascal Siakam,PTS,20.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
+Pascal Siakam,PTS,19.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 OG Anunoby,PTS,17.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
-Andrew Nembhard,PTS,15.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
-Ivica Zubac,PTS,12.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
+Andrew Nembhard,PTS,14.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
+Ivica Zubac,PTS,11.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Aaron Nesmith,PTS,11.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Kelly Oubre Jr.,PTS,10.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
-Obi Toppin,PTS,10.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
+Obi Toppin,PTS,9.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Josh Hart,PTS,9.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Landry Shamet,PTS,9.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Mikal Bridges,PTS,8.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Miles McBride,PTS,7.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
+Quenton Jackson,PTS,7.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Andre Drummond,PTS,3.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Karl-Anthony Towns,REB,12.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Ivica Zubac,REB,9.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
@@ -29,13 +30,12 @@ Josh Hart,REB,7.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Andre Drummond,REB,6.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Pascal Siakam,REB,6.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 OG Anunoby,REB,5.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
-Obi Toppin,REB,3.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Kelly Oubre Jr.,REB,3.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
+Obi Toppin,REB,3.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Aaron Nesmith,REB,3.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Jalen Brunson,REB,3.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Mikal Bridges,REB,2.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
 Andrew Nembhard,REB,2.5,DraftKings,Indiana Pacers,New York Knicks,219.5,8.5
-Quenton Jackson,PTS,7.5,FanDuel,Indiana Pacers,New York Knicks,219.5,8.5
 Ryan Rollins,AST,3.5,FanDuel,Orlando Magic,Milwaukee Bucks,223.5,9.5
 Anthony Black,AST,4.5,FanDuel,Orlando Magic,Milwaukee Bucks,223.5,9.5
 Franz Wagner,AST,6.5,FanDuel,Orlando Magic,Milwaukee Bucks,223.5,9.5
@@ -75,6 +75,7 @@ Jaime Jaquez Jr,REB,4.5,FanDuel,Orlando Magic,Milwaukee Bucks,223.5,9.5
 Kyle Kuzma,AST,2.5,DraftKings,Orlando Magic,Milwaukee Bucks,223.5,9.5
 Myles Turner,AST,1.5,DraftKings,Orlando Magic,Milwaukee Bucks,223.5,9.5
 Wendell Carter Jr,AST,1.5,DraftKings,Orlando Magic,Milwaukee Bucks,223.5,9.5
+Ryan Rollins,REB,2.5,DraftKings,Orlando Magic,Milwaukee Bucks,223.5,9.5
 Nickeil Alexander-Walker,AST,2.5,FanDuel,Chicago Bulls,Atlanta Hawks,245.5,7.5
 Jalen Johnson,AST,7.5,FanDuel,Chicago Bulls,Atlanta Hawks,245.5,7.5
 Onyeka Okongwu,AST,2.5,FanDuel,Chicago Bulls,Atlanta Hawks,245.5,7.5
@@ -116,9 +117,9 @@ James Harden,AST,6.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Bam Adebayo,PTS,18.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Klay Thompson,PTS,13.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Donovan Mitchell,PTS,25.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
-Andrew Wiggins,PTS,11.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
+Andrew Wiggins,PTS,12.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
 James Harden,PTS,17.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
-Bobby Portis,PTS,7.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
+Bobby Portis,PTS,8.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Meleek Thomas,PTS,11.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Peyton Watson,PTS,13.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Tyrese Proctor,PTS,6.5,FanDuel,Miami Heat,Cleveland Cavaliers,236.5,2.5
@@ -142,10 +143,11 @@ Tyrese Proctor,AST,2.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Peyton Watson,AST,2.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Jaylon Tyson,AST,1.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Klay Thompson,AST,1.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
-Jarrett Allen,AST,1.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Andrew Wiggins,AST,1.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
+Jarrett Allen,AST,1.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Meleek Thomas,AST,1.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Mario Hezonja,AST,1.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
+Bobby Portis,AST,1.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Andrew Wiggins,REB,3.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Tyrese Proctor,REB,2.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
 Klay Thompson,REB,2.5,DraftKings,Miami Heat,Cleveland Cavaliers,236.5,2.5
@@ -163,7 +165,7 @@ Cam Spencer,PTS,8.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies,235.5,3.5
 Jerami Grant,PTS,11.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies,235.5,3.5
 Ty Jerome,PTS,23.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies,235.5,3.5
 Zion Williamson,PTS,22.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies,235.5,3.5
-Isaiah Stewart,PTS,11.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies,235.5,3.5
+Isaiah Stewart,PTS,10.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies,235.5,3.5
 Saddiq Bey,PTS,17.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies,235.5,3.5
 Cameron Boozer,PTS,17.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies,235.5,3.5
 Derik Queen,PTS,10.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies,235.5,3.5
@@ -230,12 +232,12 @@ Draymond Green,AST,5.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,
 Dylan Harper,AST,4.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Brandin Podziemski,AST,4.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Yaxel Lendeborg,AST,3.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
-Victor Wembanyama,AST,2.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 De'Anthony Melton,AST,2.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
+Victor Wembanyama,AST,2.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Devin Vassell,AST,2.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Al Horford,AST,1.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Victor Wembanyama,PTS,28.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
-Yaxel Lendeborg,PTS,21.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
+Yaxel Lendeborg,PTS,20.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Brandin Podziemski,PTS,17.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Dylan Harper,PTS,16.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Stephon Castle,PTS,16.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
@@ -244,6 +246,7 @@ De'Anthony Melton,PTS,12.5,DraftKings,San Antonio Spurs,Golden State Warriors,21
 Devin Vassell,PTS,11.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Keldon Johnson,PTS,9.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Julian Champagnie,PTS,9.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
+Gui Santos,PTS,6.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Al Horford,PTS,6.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Draymond Green,PTS,5.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Victor Wembanyama,REB,11.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
@@ -260,7 +263,6 @@ De'Aaron Fox,REB,3.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12
 Devin Vassell,REB,3.5,DraftKings,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Gary Payton II,PTS,5.5,FanDuel,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Will Richard,PTS,4.5,FanDuel,San Antonio Spurs,Golden State Warriors,218.5,12.5
-Gui Santos,PTS,5.5,FanDuel,San Antonio Spurs,Golden State Warriors,218.5,12.5
 Deni Avdija,AST,6.5,FanDuel,Sacramento Kings,Portland Trail Blazers,229.5,10.5
 Damian Lillard,AST,4.5,FanDuel,Sacramento Kings,Portland Trail Blazers,229.5,10.5
 Jrue Holiday,AST,3.5,FanDuel,Sacramento Kings,Portland Trail Blazers,229.5,10.5
