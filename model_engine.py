@@ -28,6 +28,10 @@ def load_all_data(base_path=""):
         track_df = pd.read_csv(f"{base_path}player_tracking.csv")
     except FileNotFoundError:
         track_df = pd.DataFrame(columns=["PLAYER_NAME", "REB", "REB_CHANCES", "AST", "POTENTIAL_AST"])
+    try:
+        inj_df = pd.read_csv(f"{base_path}injuries_out.csv")
+    except FileNotFoundError:
+        inj_df = pd.DataFrame(columns=["PLAYER_NAME", "TEAM_NAME", "STATUS"])
 
     all_players_df["GAME_DATE"] = pd.to_datetime(all_players_df["GAME_DATE"])
     all_players_df["MIN"] = pd.to_numeric(all_players_df["MIN"], errors="coerce").fillna(0)
@@ -48,10 +52,43 @@ def load_all_data(base_path=""):
 
     dvp_table = pd.merge(dvp_grouped, league_pos_avg[["POS", "LG_PTS_PER_MIN", "LG_REB_PER_MIN", "LG_AST_PER_MIN"]], on="POS")
 
-    return all_players_df, teams_df, shot_df, track_df, dvp_table
+    return all_players_df, teams_df, shot_df, track_df, dvp_table, inj_df
 
-def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot_df, track_df, dvp_table, is_home=True, game_total=226.0, spread=0.0):
+def get_usage_boost(all_players_df, p_df, player_name, team_abbr, stat, out_players_set):
+    team_logs = all_players_df[all_players_df["TEAM_ABBREVIATION"] == team_abbr]
+    if team_logs.empty:
+        return 1.0, ""
+
+    star_stats = team_logs[team_logs["MIN"] >= 20].groupby("PLAYER_NAME")[["PTS", "AST"]].mean()
+    star_stats["USAGE_PROXY"] = star_stats["PTS"] + (star_stats["AST"] * 1.5)
+    top_stars = star_stats.sort_values(by="USAGE_PROXY", ascending=False).head(2).index.tolist()
+
+    out_stars = [s for s in top_stars if s in out_players_set and s != player_name]
+    if not out_stars:
+        return 1.0, ""
+
+    star_out = next(iter(out_stars))
+    star_games = set(team_logs[team_logs["PLAYER_NAME"] == star_out]["GAME_ID"].unique())
+    valid_p = p_df[p_df["MIN"] >= 15]
+    without_df = valid_p[~valid_p["GAME_ID"].isin(star_games)]
+    with_df = valid_p[valid_p["GAME_ID"].isin(star_games)]
+
+    if len(without_df) >= 2 and len(with_df) >= 2 and with_df[stat].mean() > 0:
+        actual_ratio = without_df[stat].mean() / with_df[stat].mean()
+        boost_factor = max(1.0, min(1.22, 1 + (actual_ratio - 1) * 0.70))
+    else:
+        boost_factor = 1.12
+
+    pct_bump = (boost_factor - 1.0) * 100
+    last_name = star_out.split(" ")[-1]
+    return boost_factor, f"⚡ +{pct_bump:.0f}% ({last_name} OUT)"
+
+def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line, teams_df, shot_df, track_df, dvp_table, out_players_set=None, is_home=True, game_total=226.0, spread=0.0):
+    if out_players_set is None:
+        out_players_set = set()
+
     player_pos = next(iter(p_df["POS"])) if not p_df.empty else "G"
+    team_abbr = next(iter(p_df["TEAM_ABBREVIATION"])) if not p_df.empty else ""
     valid_df = p_df[p_df["MIN"] >= 15]
     if len(valid_df) < 5:
         valid_df = p_df
@@ -66,7 +103,6 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
     raw_avg = (valid_df.head(5)[stat].mean() * 0.60) + (l10[stat].mean() * 0.40)
     baseline = (rate_proj * 0.60) + (raw_avg * 0.40)
 
-    # Tracking Opportunity Blend
     t_row = track_df[track_df["PLAYER_NAME"] == player_name]
     opp_volume_note = ""
     if not t_row.empty:
@@ -74,27 +110,23 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
         if stat == "REB" and tr["REB_CHANCES"] > 0:
             expected_reb = tr["REB_CHANCES"] * 0.56
             baseline = (baseline * 0.70) + (expected_reb * 0.30)
-            opp_volume_note = f"{tr['REB_CHANCES']:.1f} Reb Chances/g"
+            opp_volume_note = f"{tr['REB_CHANCES']:.1f} Reb Ch/g"
         elif stat == "AST" and tr["POTENTIAL_AST"] > 0:
             expected_ast = tr["POTENTIAL_AST"] * 0.52
             baseline = (baseline * 0.70) + (expected_ast * 0.30)
             opp_volume_note = f"{tr['POTENTIAL_AST']:.1f} Pot Ast/g"
 
-    # Home vs. Away Split
     split_df = valid_df[valid_df["MATCHUP"].str.contains("vs." if is_home else "@", na=False)]
     if len(split_df) >= 3:
         baseline = (baseline * 0.80) + (split_df[stat].mean() * 0.20)
 
-    # Head-to-Head History
     opp_abbr = full_to_abbr.get(opp_name, "")
     if opp_abbr:
         h2h_df = valid_df[valid_df["MATCHUP"].str.contains(opp_abbr, na=False)]
         if len(h2h_df) >= 1:
             baseline = (baseline * 0.85) + (h2h_df[stat].mean() * 0.15)
 
-    # Additive & Capped Matchup Adjustments (Prevents compounding inflation)
     adj_pct = 0.0
-
     opp_row = teams_df[teams_df["TEAM_NAME"] == opp_name]
     if not opp_row.empty:
         opp_stats = opp_row.squeeze()
@@ -107,7 +139,6 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
             stat_diff = (opp_stats["OPP_AST"] / teams_df["OPP_AST"].mean()) - 1.0
         adj_pct += (pace_diff * 0.30) + (stat_diff * 0.25)
 
-    # DvP Adjustment
     dvp_row = dvp_table[(dvp_table["OPP_ABBR"] == opp_abbr) & (dvp_table["POS"] == player_pos)]
     if dvp_row.empty:
         dvp_label = "Neutral"
@@ -118,7 +149,6 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
         adj_pct += (ratio - 1.0) * 0.35
         dvp_label = f"{(ratio - 1)*100:+.1f}% vs {player_pos}"
 
-    # Shot Zone Adjustment (for PTS)
     p_shot = shot_df[shot_df["PLAYER_NAME"] == player_name]
     shot_label = "Standard"
     if not p_shot.empty and not opp_row.empty:
@@ -142,7 +172,6 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
         else:
             shot_label = opp_volume_note if opp_volume_note else style
 
-    # Vegas Total, Blowout, & B2B Rest
     adj_pct += ((game_total - 226.0) / 226.0) * 0.35
     if spread >= 13.5:
         adj_pct -= 0.035
@@ -151,14 +180,14 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
     if is_b2b:
         adj_pct -= 0.025
 
-    # Cap total matchup swing at +/- 15%
     adj_pct = max(-0.15, min(0.15, adj_pct))
     raw_model_proj = baseline * (1.0 + adj_pct)
 
-    # Market-Aware Shrinkage: Anchor 25% to sportsbook line to prevent outlier inflation
-    final_proj = (raw_model_proj * 0.75) + (line * 0.25)
+    usage_factor, usage_note = get_usage_boost(all_players_df, p_df, player_name, team_abbr, stat, out_players_set)
+    raw_model_proj = raw_model_proj * usage_factor
 
-    # Full-Season Volatility with Realistic NBA Floors
+    final_proj = (raw_model_proj * 0.55) + (line * 0.45)
+
     min_std_floors = {"PTS": 5.5, "REB": 2.6, "AST": 2.1}
     season_std = valid_df[stat].std()
     floor_std = max(min_std_floors.get(stat, 2.5), line * 0.24)
@@ -173,7 +202,6 @@ def calculate_projection(p_df, player_name, stat, opp_name, line, teams_df, shot
         lean = "UNDER"
         win_prob = (1.0 - prob_over) * 100
 
-    # Cap displayed probability at 72% (realistic ceiling for NBA player props)
-    win_prob = min(72.0, win_prob)
+    win_prob = min(66.5, win_prob)
     pct_edge = ((final_proj - line) / line) * 100 if line > 0 else 0
-    return final_proj, lean, win_prob, pct_edge, is_b2b, round(proj_min, 1), player_pos, dvp_label, shot_label
+    return final_proj, lean, win_prob, pct_edge, is_b2b, round(proj_min, 1), player_pos, dvp_label, shot_label, usage_note
