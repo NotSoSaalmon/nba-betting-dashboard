@@ -1,143 +1,317 @@
 PLAYER_NAME,STAT,LINE,BOOK,HOME_TEAM,AWAY_TEAM
-Paul Reed Jr,AST,1.5,FanDuel,Washington Wizards,Detroit Pistons
-Anthony Davis,AST,2.5,FanDuel,Washington Wizards,Detroit Pistons
-Duncan Robinson,AST,2.5,FanDuel,Washington Wizards,Detroit Pistons
-AJ Dybantsa,AST,2.5,FanDuel,Washington Wizards,Detroit Pistons
-Kyshawn George,AST,4.5,FanDuel,Washington Wizards,Detroit Pistons
-Alex Sarr,AST,1.5,FanDuel,Washington Wizards,Detroit Pistons
-Daniss Jenkins,AST,4.5,FanDuel,Washington Wizards,Detroit Pistons
-Ausar Thompson,AST,4.5,FanDuel,Washington Wizards,Detroit Pistons
-Cade Cunningham,AST,8.5,FanDuel,Washington Wizards,Detroit Pistons
-Trae Young,AST,8.5,FanDuel,Washington Wizards,Detroit Pistons
-John Collins,AST,1.5,FanDuel,Washington Wizards,Detroit Pistons
-Tre Johnson,PTS,7.5,FanDuel,Washington Wizards,Detroit Pistons
-Ausar Thompson,PTS,10.5,FanDuel,Washington Wizards,Detroit Pistons
-Cade Cunningham,PTS,24.5,FanDuel,Washington Wizards,Detroit Pistons
-Trae Young,PTS,16.5,FanDuel,Washington Wizards,Detroit Pistons
-Paul Reed Jr,PTS,10.5,FanDuel,Washington Wizards,Detroit Pistons
-Kevin Huerter,PTS,8.5,FanDuel,Washington Wizards,Detroit Pistons
-Duncan Robinson,PTS,15.5,FanDuel,Washington Wizards,Detroit Pistons
-Anthony Davis,PTS,22.5,FanDuel,Washington Wizards,Detroit Pistons
-Kyshawn George,PTS,14.5,FanDuel,Washington Wizards,Detroit Pistons
-Daniss Jenkins,PTS,14.5,FanDuel,Washington Wizards,Detroit Pistons
-John Collins,PTS,12.5,FanDuel,Washington Wizards,Detroit Pistons
-AJ Dybantsa,PTS,16.5,FanDuel,Washington Wizards,Detroit Pistons
-Alex Sarr,PTS,9.5,FanDuel,Washington Wizards,Detroit Pistons
-Paul Reed Jr,REB,6.5,FanDuel,Washington Wizards,Detroit Pistons
-Anthony Davis,REB,10.5,FanDuel,Washington Wizards,Detroit Pistons
-Daniss Jenkins,REB,3.5,FanDuel,Washington Wizards,Detroit Pistons
-John Collins,REB,6.5,FanDuel,Washington Wizards,Detroit Pistons
-Alex Sarr,REB,6.5,FanDuel,Washington Wizards,Detroit Pistons
-Cade Cunningham,REB,5.5,FanDuel,Washington Wizards,Detroit Pistons
-Trae Young,REB,2.5,FanDuel,Washington Wizards,Detroit Pistons
-AJ Dybantsa,REB,5.5,FanDuel,Washington Wizards,Detroit Pistons
-Ausar Thompson,REB,7.5,FanDuel,Washington Wizards,Detroit Pistons
-Duncan Robinson,REB,2.5,FanDuel,Washington Wizards,Detroit Pistons
-Kyshawn George,REB,4.5,FanDuel,Washington Wizards,Detroit Pistons
-Jakob Poeltl,AST,1.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Ja'Kobe Walter,AST,1.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-R.J. Barrett,AST,3.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-VJ Edgecombe,AST,3.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Immanuel Quickley,AST,5.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Jaylen Brown,AST,3.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Collin Murray-Boyles,AST,1.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Joel Embiid,AST,3.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-LeBron James,AST,6.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Tyrese Maxey,AST,5.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Immanuel Quickley,PTS,15.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-R.J. Barrett,PTS,21.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Jakob Poeltl,PTS,10.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Collin Murray-Boyles,PTS,11.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Joel Embiid,PTS,18.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-VJ Edgecombe,PTS,13.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Tyrese Maxey,PTS,24.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Ja'Kobe Walter,PTS,10.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-LeBron James,PTS,16.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Jaylen Brown,PTS,22.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Ja'Kobe Walter,REB,3.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Immanuel Quickley,REB,3.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Tyrese Maxey,REB,3.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-LeBron James,REB,6.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Joel Embiid,REB,8.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Jaylen Brown,REB,6.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-VJ Edgecombe,REB,5.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Collin Murray-Boyles,REB,5.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-R.J. Barrett,REB,5.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Jakob Poeltl,REB,7.5,FanDuel,Philadelphia 76ers,Toronto Raptors
-Rudy Gobert,AST,1.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-LaMelo Ball,AST,6.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Ayo Dosunmu,AST,4.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Jonathan Kuminga,AST,2.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Cooper Flagg,AST,6.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Naji Marshall,AST,2.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Jaden McDaniels,AST,3.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Kyrie Irving,AST,4.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Rudy Gobert,PTS,9.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-LaMelo Ball,PTS,20.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Jonathan Kuminga,PTS,13.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-P.J. Washington,PTS,13.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Daniel Gafford,PTS,7.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Terrence Shannon Jr.,PTS,9.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Kyrie Irving,PTS,22.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Cooper Flagg,PTS,24.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Ayo Dosunmu,PTS,17.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Jaden McDaniels,PTS,17.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Santi Aldama,PTS,7.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Naji Marshall,PTS,9.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-P.J. Washington,REB,6.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Caleb Martin,REB,2.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Naji Marshall,REB,3.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Santi Aldama,REB,3.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-LaMelo Ball,REB,3.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Rudy Gobert,REB,11.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Daniel Gafford,REB,5.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Ayo Dosunmu,REB,4.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Cooper Flagg,REB,6.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Jonathan Kuminga,REB,5.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Jaden McDaniels,REB,5.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-Kyrie Irving,REB,3.5,FanDuel,Minnesota Timberwolves,Dallas Mavericks
-P.J. Washington,AST,1.5,DraftKings,Minnesota Timberwolves,Dallas Mavericks
-Caleb Martin,AST,1.5,DraftKings,Minnesota Timberwolves,Dallas Mavericks
-Daniel Gafford,AST,1.5,DraftKings,Minnesota Timberwolves,Dallas Mavericks
-Caleb Martin,PTS,3.5,DraftKings,Minnesota Timberwolves,Dallas Mavericks
-Moussa Diabate,AST,1.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Sion James,AST,2.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Jalen Green,AST,2.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Collin Gillespie,AST,3.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Oso Ighodaro,AST,2.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Grayson Allen,AST,4.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Devin Booker,AST,4.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Dillon Brooks,AST,1.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Miles Bridges,AST,2.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Naz Reid,AST,2.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Coby White,AST,3.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Moussa Diabate,PTS,8.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Miles Bridges,PTS,14.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Sion James,PTS,8.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Ryan Kalkbrenner,PTS,5.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Oso Ighodaro,PTS,6.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Jalen Green,PTS,13.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Devin Booker,PTS,24.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Grayson Allen,PTS,17.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Royce O'Neale,PTS,7.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Dillon Brooks,PTS,14.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Khaman Maluach,PTS,6.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Collin Gillespie,PTS,8.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Coby White,PTS,13.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Jordan Goodwin,PTS,7.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Naz Reid,PTS,20.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Miles Bridges,REB,6.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Coby White,REB,2.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Moussa Diabate,REB,9.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Jalen Green,REB,3.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Oso Ighodaro,REB,4.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Grayson Allen,REB,3.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Collin Gillespie,REB,2.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Royce O'Neale,REB,3.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Devin Booker,REB,3.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Khaman Maluach,REB,5.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Dillon Brooks,REB,3.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Jordan Goodwin,REB,3.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Naz Reid,REB,8.5,FanDuel,Phoenix Suns,Charlotte Hornets
-Ryan Kalkbrenner,REB,4.5,DraftKings,Phoenix Suns,Charlotte Hornets
-Sion James,REB,3.5,DraftKings,Phoenix Suns,Charlotte Hornets
+Andrew Nembhard,AST,7.5,DraftKings,Indiana Pacers,New York Knicks
+Jalen Brunson,AST,6.5,DraftKings,Indiana Pacers,New York Knicks
+Karl-Anthony Towns,AST,3.5,DraftKings,Indiana Pacers,New York Knicks
+Pascal Siakam,AST,3.5,DraftKings,Indiana Pacers,New York Knicks
+Josh Hart,AST,3.5,DraftKings,Indiana Pacers,New York Knicks
+Ivica Zubac,AST,1.5,DraftKings,Indiana Pacers,New York Knicks
+Mikal Bridges,AST,1.5,DraftKings,Indiana Pacers,New York Knicks
+OG Anunoby,AST,1.5,DraftKings,Indiana Pacers,New York Knicks
+Landry Shamet,AST,1.5,DraftKings,Indiana Pacers,New York Knicks
+Jalen Brunson,PTS,25.5,DraftKings,Indiana Pacers,New York Knicks
+Pascal Siakam,PTS,21.5,DraftKings,Indiana Pacers,New York Knicks
+Karl-Anthony Towns,PTS,20.5,DraftKings,Indiana Pacers,New York Knicks
+OG Anunoby,PTS,17.5,DraftKings,Indiana Pacers,New York Knicks
+Andrew Nembhard,PTS,15.5,DraftKings,Indiana Pacers,New York Knicks
+Ivica Zubac,PTS,13.5,DraftKings,Indiana Pacers,New York Knicks
+Kelly Oubre Jr.,PTS,11.5,DraftKings,Indiana Pacers,New York Knicks
+Obi Toppin,PTS,9.5,DraftKings,Indiana Pacers,New York Knicks
+Josh Hart,PTS,9.5,DraftKings,Indiana Pacers,New York Knicks
+Landry Shamet,PTS,8.5,DraftKings,Indiana Pacers,New York Knicks
+Mikal Bridges,PTS,8.5,DraftKings,Indiana Pacers,New York Knicks
+Miles McBride,PTS,7.5,DraftKings,Indiana Pacers,New York Knicks
+Andre Drummond,PTS,3.5,DraftKings,Indiana Pacers,New York Knicks
+Karl-Anthony Towns,REB,12.5,DraftKings,Indiana Pacers,New York Knicks
+Ivica Zubac,REB,10.5,DraftKings,Indiana Pacers,New York Knicks
+Josh Hart,REB,7.5,DraftKings,Indiana Pacers,New York Knicks
+Andre Drummond,REB,6.5,DraftKings,Indiana Pacers,New York Knicks
+Pascal Siakam,REB,6.5,DraftKings,Indiana Pacers,New York Knicks
+OG Anunoby,REB,5.5,DraftKings,Indiana Pacers,New York Knicks
+Obi Toppin,REB,4.5,DraftKings,Indiana Pacers,New York Knicks
+Kelly Oubre Jr.,REB,3.5,DraftKings,Indiana Pacers,New York Knicks
+Jalen Brunson,REB,3.5,DraftKings,Indiana Pacers,New York Knicks
+Mikal Bridges,REB,2.5,DraftKings,Indiana Pacers,New York Knicks
+Andrew Nembhard,REB,2.5,DraftKings,Indiana Pacers,New York Knicks
+Landry Shamet,REB,2.5,DraftKings,Indiana Pacers,New York Knicks
+Kyle Kuzma,AST,2.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Myles Turner,AST,1.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Tyler Herro,AST,4.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Brayden Burries,AST,3.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Tyler Herro,PTS,21.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Brayden Burries,PTS,11.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Myles Turner,PTS,9.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Kyle Kuzma,PTS,10.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Brayden Burries,REB,5.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Myles Turner,REB,5.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Kyle Kuzma,REB,4.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Tyler Herro,REB,4.5,FanDuel,Orlando Magic,Milwaukee Bucks
+Jaime Jaquez Jr,AST,3.5,DraftKings,Orlando Magic,Milwaukee Bucks
+Franz Wagner,PTS,25.5,DraftKings,Orlando Magic,Milwaukee Bucks
+Desmond Bane,PTS,20.5,DraftKings,Orlando Magic,Milwaukee Bucks
+Jaime Jaquez Jr,PTS,13.5,DraftKings,Orlando Magic,Milwaukee Bucks
+Wendell Carter Jr,PTS,12.5,DraftKings,Orlando Magic,Milwaukee Bucks
+Jalen Suggs,PTS,10.5,DraftKings,Orlando Magic,Milwaukee Bucks
+Kingston Flemings,AST,4.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Nickeil Alexander-Walker,AST,2.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Dyson Daniels,AST,5.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Matas Buzelis,AST,2.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Norman Powell,AST,1.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Josh Giddey,AST,8.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Jalen Johnson,AST,7.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Onyeka Okongwu,AST,2.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Jalen Smith,AST,1.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Nickeil Alexander-Walker,PTS,23.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Kingston Flemings,PTS,10.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Patrick Williams,PTS,8.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Matas Buzelis,PTS,17.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Dyson Daniels,PTS,11.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Josh Giddey,PTS,13.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Isaac Okoro,PTS,8.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Jalen Johnson,PTS,22.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Jalen Smith,PTS,14.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Onyeka Okongwu,PTS,14.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Aaron Wiggins,PTS,13.5,FanDuel,Chicago Bulls,Atlanta Hawks
+C.J. McCollum,PTS,15.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Norman Powell,PTS,21.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Kingston Flemings,REB,2.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Nickeil Alexander-Walker,REB,3.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Dyson Daniels,REB,6.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Patrick Williams,REB,3.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Norman Powell,REB,2.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Isaac Okoro,REB,2.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Josh Giddey,REB,5.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Jalen Johnson,REB,9.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Matas Buzelis,REB,5.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Onyeka Okongwu,REB,7.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Jalen Smith,REB,8.5,FanDuel,Chicago Bulls,Atlanta Hawks
+Pelle Larsson,AST,3.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Bam Adebayo,AST,3.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Donovan Mitchell,AST,5.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Klay Thompson,AST,1.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Peyton Watson,AST,2.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Tyrese Proctor,AST,2.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Giannis Antetokounmpo,AST,5.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Davion Mitchell,AST,8.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Meleek Thomas,AST,1.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Jarrett Allen,AST,1.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Jaylon Tyson,AST,2.5,FanDuel,Miami Heat,Cleveland Cavaliers
+James Harden,AST,6.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Bam Adebayo,PTS,18.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Pelle Larsson,PTS,11.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Klay Thompson,PTS,13.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Donovan Mitchell,PTS,24.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Andrew Wiggins,PTS,10.5,FanDuel,Miami Heat,Cleveland Cavaliers
+James Harden,PTS,17.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Meleek Thomas,PTS,11.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Peyton Watson,PTS,13.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Tyrese Proctor,PTS,6.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Davion Mitchell,PTS,14.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Giannis Antetokounmpo,PTS,29.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Mario Hezonja,PTS,7.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Jarrett Allen,PTS,14.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Jaylon Tyson,PTS,12.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Bam Adebayo,REB,9.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Pelle Larsson,REB,3.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Donovan Mitchell,REB,4.5,FanDuel,Miami Heat,Cleveland Cavaliers
+James Harden,REB,4.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Meleek Thomas,REB,3.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Peyton Watson,REB,4.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Tyrese Proctor,REB,2.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Giannis Antetokounmpo,REB,12.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Davion Mitchell,REB,2.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Mario Hezonja,REB,4.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Jaylon Tyson,REB,4.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Jarrett Allen,REB,9.5,FanDuel,Miami Heat,Cleveland Cavaliers
+Andrew Wiggins,REB,3.5,DraftKings,Miami Heat,Cleveland Cavaliers
+Klay Thompson,REB,2.5,DraftKings,Miami Heat,Cleveland Cavaliers
+Cameron Boozer,AST,5.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Cam Spencer,AST,4.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Derik Queen,AST,2.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Ty Jerome,AST,5.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Jeremiah Fears,AST,5.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Dejounte Murray,AST,4.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Zion Williamson,AST,2.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Cedric Coward,AST,2.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Saddiq Bey,PTS,14.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Jeremiah Fears,PTS,17.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Cameron Boozer,PTS,17.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Cam Spencer,PTS,8.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Jerami Grant,PTS,11.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Derik Queen,PTS,10.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Dejounte Murray,PTS,13.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Ty Jerome,PTS,23.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Jaylen Wells,PTS,11.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Karlo Matkovic,PTS,7.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Zion Williamson,PTS,21.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Herb Jones,PTS,7.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Cedric Coward,PTS,13.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Isaiah Stewart,PTS,10.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Jeremiah Fears,REB,4.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Cameron Boozer,REB,9.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Cam Spencer,REB,2.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Ty Jerome,REB,3.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Zion Williamson,REB,5.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Jerami Grant,REB,2.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Dejounte Murray,REB,4.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Herb Jones,REB,3.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Jaylen Wells,REB,2.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Cedric Coward,REB,7.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Karlo Matkovic,REB,4.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Isaiah Stewart,REB,5.5,FanDuel,New Orleans Pelicans,Memphis Grizzlies
+Derik Queen,REB,6.5,DraftKings,New Orleans Pelicans,Memphis Grizzlies
+Saddiq Bey,REB,4.5,DraftKings,New Orleans Pelicans,Memphis Grizzlies
+Tari Eason,AST,1.5,FanDuel,Houston Rockets,Utah Jazz
+Keyonte George,AST,5.5,FanDuel,Houston Rockets,Utah Jazz
+Darryn Peterson,AST,4.5,FanDuel,Houston Rockets,Utah Jazz
+Amen Thompson,AST,3.5,FanDuel,Houston Rockets,Utah Jazz
+Jaxson Hayes,AST,1.5,FanDuel,Houston Rockets,Utah Jazz
+Fred VanVleet,AST,5.5,FanDuel,Houston Rockets,Utah Jazz
+Isaiah Collier,AST,3.5,FanDuel,Houston Rockets,Utah Jazz
+Kevin Durant,AST,3.5,FanDuel,Houston Rockets,Utah Jazz
+Jabari Smith Jr,AST,1.5,FanDuel,Houston Rockets,Utah Jazz
+Reed Sheppard,AST,2.5,FanDuel,Houston Rockets,Utah Jazz
+Alperen Sengun,AST,6.5,FanDuel,Houston Rockets,Utah Jazz
+Tari Eason,PTS,9.5,FanDuel,Houston Rockets,Utah Jazz
+Alperen Sengun,PTS,20.5,FanDuel,Houston Rockets,Utah Jazz
+Jabari Smith Jr,PTS,14.5,FanDuel,Houston Rockets,Utah Jazz
+Keyonte George,PTS,20.5,FanDuel,Houston Rockets,Utah Jazz
+Fred VanVleet,PTS,12.5,FanDuel,Houston Rockets,Utah Jazz
+Amen Thompson,PTS,16.5,FanDuel,Houston Rockets,Utah Jazz
+Darryn Peterson,PTS,18.5,FanDuel,Houston Rockets,Utah Jazz
+Kevin Durant,PTS,22.5,FanDuel,Houston Rockets,Utah Jazz
+Jaxson Hayes,PTS,7.5,FanDuel,Houston Rockets,Utah Jazz
+Isaiah Collier,PTS,6.5,FanDuel,Houston Rockets,Utah Jazz
+Josh Green,PTS,5.5,FanDuel,Houston Rockets,Utah Jazz
+Ace Bailey,PTS,13.5,FanDuel,Houston Rockets,Utah Jazz
+Reed Sheppard,PTS,10.5,FanDuel,Houston Rockets,Utah Jazz
+Alperen Sengun,REB,9.5,FanDuel,Houston Rockets,Utah Jazz
+Darryn Peterson,REB,4.5,FanDuel,Houston Rockets,Utah Jazz
+Keyonte George,REB,3.5,FanDuel,Houston Rockets,Utah Jazz
+Fred VanVleet,REB,3.5,FanDuel,Houston Rockets,Utah Jazz
+Jaxson Hayes,REB,5.5,FanDuel,Houston Rockets,Utah Jazz
+Isaiah Collier,REB,1.5,FanDuel,Houston Rockets,Utah Jazz
+Amen Thompson,REB,7.5,FanDuel,Houston Rockets,Utah Jazz
+Kevin Durant,REB,5.5,FanDuel,Houston Rockets,Utah Jazz
+Ace Bailey,REB,5.5,FanDuel,Houston Rockets,Utah Jazz
+Jabari Smith Jr,REB,6.5,FanDuel,Houston Rockets,Utah Jazz
+Josh Green,REB,2.5,FanDuel,Houston Rockets,Utah Jazz
+Tari Eason,REB,5.5,DraftKings,Houston Rockets,Utah Jazz
+Draymond Green,AST,6.5,DraftKings,San Antonio Spurs,Golden State Warriors
+De'Aaron Fox,AST,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Stephon Castle,AST,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Dylan Harper,AST,4.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Yaxel Lendeborg,AST,3.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Brandin Podziemski,AST,3.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Victor Wembanyama,AST,2.5,DraftKings,San Antonio Spurs,Golden State Warriors
+De'Anthony Melton,AST,2.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Devin Vassell,AST,2.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Al Horford,AST,1.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Victor Wembanyama,PTS,28.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Yaxel Lendeborg,PTS,21.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Brandin Podziemski,PTS,17.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Stephon Castle,PTS,16.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Dylan Harper,PTS,16.5,DraftKings,San Antonio Spurs,Golden State Warriors
+De'Aaron Fox,PTS,13.5,DraftKings,San Antonio Spurs,Golden State Warriors
+De'Anthony Melton,PTS,11.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Keldon Johnson,PTS,11.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Devin Vassell,PTS,11.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Julian Champagnie,PTS,9.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Al Horford,PTS,6.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Draymond Green,PTS,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Will Richard,PTS,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Victor Wembanyama,REB,11.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Yaxel Lendeborg,REB,6.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Stephon Castle,REB,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Keldon Johnson,REB,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Brandin Podziemski,REB,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Julian Champagnie,REB,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Dylan Harper,REB,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Draymond Green,REB,5.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Al Horford,REB,4.5,DraftKings,San Antonio Spurs,Golden State Warriors
+De'Anthony Melton,REB,4.5,DraftKings,San Antonio Spurs,Golden State Warriors
+De'Aaron Fox,REB,3.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Devin Vassell,REB,3.5,DraftKings,San Antonio Spurs,Golden State Warriors
+Gary Payton II,PTS,5.5,FanDuel,San Antonio Spurs,Golden State Warriors
+Domantas Sabonis,AST,5.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Zach LaVine,AST,2.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Darius Acuff Jr.,AST,6.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Sidy Cissoko,AST,1.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Deni Avdija,AST,6.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Donovan Clingan,AST,2.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Damian Lillard,AST,4.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Scoot Henderson,AST,2.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Toumani Camara,AST,1.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Jrue Holiday,AST,3.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+De'Andre Hunter,PTS,12.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Domantas Sabonis,PTS,12.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Donovan Clingan,PTS,10.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Deni Avdija,PTS,23.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Zach LaVine,PTS,18.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Darius Acuff Jr.,PTS,24.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Keegan Murray,PTS,10.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Scoot Henderson,PTS,10.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Damian Lillard,PTS,21.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Robert Williams,PTS,6.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Jrue Holiday,PTS,12.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Sidy Cissoko,PTS,8.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Toumani Camara,PTS,12.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+De'Andre Hunter,REB,4.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Domantas Sabonis,REB,11.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Damian Lillard,REB,3.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Zach LaVine,REB,2.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Darius Acuff Jr.,REB,3.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Scoot Henderson,REB,2.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Robert Williams,REB,5.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Deni Avdija,REB,6.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Sidy Cissoko,REB,3.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Donovan Clingan,REB,11.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Toumani Camara,REB,4.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+Jrue Holiday,REB,3.5,FanDuel,Sacramento Kings,Portland Trail Blazers
+De'Andre Hunter,AST,1.5,DraftKings,Sacramento Kings,Portland Trail Blazers
+Keegan Murray,AST,1.5,DraftKings,Sacramento Kings,Portland Trail Blazers
+Precious Achiuwa,PTS,8.5,DraftKings,Sacramento Kings,Portland Trail Blazers
+Precious Achiuwa,REB,5.5,DraftKings,Sacramento Kings,Portland Trail Blazers
+Keegan Murray,REB,3.5,DraftKings,Sacramento Kings,Portland Trail Blazers
+Rui Hachimura,AST,1.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Aday Mara,AST,1.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Isaiah Hartenstein,AST,4.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Derrick Jones,AST,1.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Keaton Wagler,AST,3.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Ajay Mitchell,AST,3.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Alex Caruso,AST,2.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Darius Garland,AST,6.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Shai Gilgeous-Alexander,AST,5.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Kenrich Williams,AST,1.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Jared McCain,AST,2.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Brook Lopez,AST,1.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Darius Garland,PTS,18.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Kris Dunn,PTS,7.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Jared McCain,PTS,14.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Aday Mara,PTS,10.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Ajay Mitchell,PTS,18.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Bennett Stirtz,PTS,8.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Shai Gilgeous-Alexander,PTS,31.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Kenrich Williams,PTS,7.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Brook Lopez,PTS,11.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Alex Caruso,PTS,6.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Kobe Sanders,PTS,7.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Keaton Wagler,PTS,10.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Rui Hachimura,PTS,15.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Derrick Jones,PTS,10.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Isaiah Hartenstein,PTS,9.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Ajay Mitchell,REB,3.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Jared McCain,REB,3.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Keaton Wagler,REB,2.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Isaiah Hartenstein,REB,10.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Aday Mara,REB,7.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Darius Garland,REB,2.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Kenrich Williams,REB,4.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Brook Lopez,REB,5.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Rui Hachimura,REB,4.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Derrick Jones,REB,4.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Shai Gilgeous-Alexander,REB,4.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Alex Caruso,REB,2.5,FanDuel,Los Angeles Clippers,Oklahoma City Thunder
+Kris Dunn,AST,3.5,DraftKings,Los Angeles Clippers,Oklahoma City Thunder
+Kobe Sanders,AST,1.5,DraftKings,Los Angeles Clippers,Oklahoma City Thunder
+Kris Dunn,REB,3.5,DraftKings,Los Angeles Clippers,Oklahoma City Thunder
+Kobe Sanders,REB,2.5,DraftKings,Los Angeles Clippers,Oklahoma City Thunder
