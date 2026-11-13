@@ -147,7 +147,13 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
         lg_rate = r[f"LG_{stat}_PER_MIN"]
         ratio = r[f"{stat}_PER_MIN"] / lg_rate if lg_rate > 0 else 1.0
         adj_pct += (ratio - 1.0) * 0.35
-        dvp_label = f"{(ratio - 1)*100:+.1f}% vs {player_pos}"
+        pct = (ratio - 1) * 100
+        if pct >= 3.0:
+            dvp_label = f"🟢 Soft vs {player_pos} ({pct:+.0f}%)"
+        elif pct <= -3.0:
+            dvp_label = f"🔴 Tough vs {player_pos} ({pct:+.0f}%)"
+        else:
+            dvp_label = f"🟡 Neutral vs {player_pos}"
 
     p_shot = shot_df[shot_df["PLAYER_NAME"] == player_name]
     shot_label = "Standard"
