@@ -1,16 +1,31 @@
 Date,Player,Opponent,Stat,Pick,Book Line,Model Proj,Win Prob %,Actual,Result
-2026-11-13,Meleek Thomas,Miami Heat,PTS,OVER,11.5,16.4,92.5,,PENDING
-2026-11-13,Draymond Green,San Antonio Spurs,PTS,UNDER,5.5,3.4,89.6,,PENDING
-2026-11-13,Tyrese Proctor,Miami Heat,PTS,OVER,6.5,11.0,89.4,,PENDING
-2026-11-13,Cam Spencer,New Orleans Pelicans,PTS,OVER,8.5,12.1,88.8,,PENDING
-2026-11-13,Derik Queen,Memphis Grizzlies,PTS,OVER,10.5,15.6,85.9,,PENDING
-2026-11-13,Anthony Black,Milwaukee Bucks,REB,OVER,4.5,6.8,84.2,,PENDING
-2026-11-13,Jaylon Tyson,Miami Heat,AST,OVER,1.5,3.1,82.9,,PENDING
-2026-11-13,Draymond Green,San Antonio Spurs,AST,OVER,5.5,8.3,82.2,,PENDING
-2026-11-13,Alex Caruso,Los Angeles Clippers,REB,OVER,3.5,5.1,80.1,,PENDING
-2026-11-13,Al Horford,San Antonio Spurs,REB,UNDER,4.5,3.2,79.7,,PENDING
-2026-11-13,Andre Drummond,Indiana Pacers,REB,OVER,6.5,9.5,79.7,,PENDING
-2026-11-13,Isaiah Stewart,New Orleans Pelicans,REB,UNDER,5.5,4.3,79.5,,PENDING
-2026-11-13,Jalen Smith,Atlanta Hawks,AST,OVER,1.5,2.6,76.6,,PENDING
-2026-11-13,Anthony Black,Milwaukee Bucks,AST,OVER,4.5,6.5,76.0,,PENDING
-2026-11-13,Kobe Sanders,Los Angeles Clippers,AST,OVER,1.5,2.9,74.3,,PENDING
+2026-11-14,Cade Cunningham,Miami Heat,PTS,OVER,25.5,30.2,66.5,,PENDING
+2026-11-14,Duncan Robinson,Miami Heat,PTS,OVER,15.5,18.0,66.5,,PENDING
+2026-11-14,LaMelo Ball,Chicago Bulls,PTS,OVER,21.5,24.8,66.5,,PENDING
+2026-11-14,Ayo Dosunmu,Chicago Bulls,PTS,OVER,17.5,22.0,66.5,,PENDING
+2026-11-14,Matas Buzelis,Minnesota Timberwolves,PTS,UNDER,16.5,13.5,66.5,,PENDING
+2026-11-14,Zaccharie Risacher,Cleveland Cavaliers,REB,OVER,2.5,3.8,66.5,,PENDING
+2026-11-14,Naji Marshall,Cleveland Cavaliers,AST,OVER,2.5,3.5,66.5,,PENDING
+2026-11-14,Jaylon Tyson,Dallas Mavericks,REB,UNDER,4.5,3.5,64.4,,PENDING
+2026-11-14,Jaden McDaniels,Chicago Bulls,AST,OVER,3.5,4.3,64.2,,PENDING
+2026-11-14,Ausar Thompson,Miami Heat,AST,OVER,4.5,5.4,62.7,,PENDING
+2026-11-14,Jaden McDaniels,Chicago Bulls,REB,OVER,5.5,6.3,61.9,,PENDING
+2026-11-14,Josh Giddey,Minnesota Timberwolves,REB,UNDER,6.5,5.6,61.7,,PENDING
+2026-11-14,Matas Buzelis,Minnesota Timberwolves,REB,UNDER,5.5,4.7,61.7,,PENDING
+2026-11-14,DeMar DeRozan,New Orleans Pelicans,AST,OVER,2.5,3.1,60.7,,PENDING
+2026-11-14,Josh Giddey,Minnesota Timberwolves,AST,UNDER,9.5,8.6,59.7,,PENDING
+2026-11-13,Meleek Thomas,Miami Heat,PTS,OVER,11.5,16.4,92.5,12.0,WIN
+2026-11-13,Draymond Green,San Antonio Spurs,PTS,UNDER,5.5,3.4,89.6,4.0,WIN
+2026-11-13,Tyrese Proctor,Miami Heat,PTS,OVER,6.5,11.0,89.4,22.0,WIN
+2026-11-13,Cam Spencer,New Orleans Pelicans,PTS,OVER,8.5,12.1,88.8,14.0,WIN
+2026-11-13,Derik Queen,Memphis Grizzlies,PTS,OVER,10.5,15.6,85.9,10.0,LOSS
+2026-11-13,Anthony Black,Milwaukee Bucks,REB,OVER,4.5,6.8,84.2,2.0,LOSS
+2026-11-13,Jaylon Tyson,Miami Heat,AST,OVER,1.5,3.1,82.9,1.0,LOSS
+2026-11-13,Draymond Green,San Antonio Spurs,AST,OVER,5.5,8.3,82.2,3.0,LOSS
+2026-11-13,Alex Caruso,Los Angeles Clippers,REB,OVER,3.5,5.1,80.1,1.0,LOSS
+2026-11-13,Al Horford,San Antonio Spurs,REB,UNDER,4.5,3.2,79.7,3.0,WIN
+2026-11-13,Andre Drummond,Indiana Pacers,REB,OVER,6.5,9.5,79.7,6.0,LOSS
+2026-11-13,Isaiah Stewart,New Orleans Pelicans,REB,UNDER,5.5,4.3,79.5,5.0,WIN
+2026-11-13,Jalen Smith,Atlanta Hawks,AST,OVER,1.5,2.6,76.6,3.0,WIN
+2026-11-13,Anthony Black,Milwaukee Bucks,AST,OVER,4.5,6.5,76.0,5.0,WIN
+2026-11-13,Kobe Sanders,Los Angeles Clippers,AST,OVER,1.5,2.9,74.3,1.0,LOSS
