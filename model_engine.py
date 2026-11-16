@@ -1,3 +1,5 @@
+import os
+import json
 import math
 import pandas as pd
 from datetime import datetime
@@ -192,6 +194,16 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
     usage_factor, usage_note = get_usage_boost(all_players_df, p_df, player_name, team_abbr, stat, out_players_set)
     raw_model_proj = raw_model_proj * usage_factor
 
+    # Load self-calibrating weights from past graded picks
+    weights_path = "/Users/rasheedwhiters/nba_project/model_weights.json"
+    if not os.path.exists(weights_path):
+        weights_path = "model_weights.json"
+    w_data = {}
+    if os.path.exists(weights_path):
+        with open(weights_path, "r") as wf:
+            w_data = json.load(wf)
+
+    raw_model_proj = raw_model_proj * (1.0 + w_data.get("global_bias_adj", 0.0))
     final_proj = (raw_model_proj * 0.55) + (line * 0.45)
 
     min_std_floors = {"PTS": 5.5, "REB": 2.6, "AST": 2.1}
@@ -208,6 +220,9 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
         lean = "UNDER"
         win_prob = (1.0 - prob_over) * 100
 
-    win_prob = min(66.5, win_prob)
+    cat_mult = w_data.get(f"{stat}_{lean}", 1.0)
+    # Apply learned category confidence multiplier to edge over 50%
+    win_prob = 50.0 + ((win_prob - 50.0) * cat_mult)
+    win_prob = max(50.5, min(66.5, win_prob))
     pct_edge = ((final_proj - line) / line) * 100 if line > 0 else 0
     return final_proj, lean, win_prob, pct_edge, is_b2b, round(proj_min, 1), player_pos, dvp_label, shot_label, usage_note

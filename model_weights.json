@@ -1,0 +1,10 @@
+{
+  "PTS_OVER": 1.0,
+  "PTS_UNDER": 1.0,
+  "REB_OVER": 1.0,
+  "REB_UNDER": 1.0,
+  "AST_OVER": 0.9856,
+  "AST_UNDER": 1.0,
+  "global_bias_adj": 0.0173,
+  "sample_size": 44
+}
