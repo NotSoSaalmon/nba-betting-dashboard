@@ -1,4 +1,5 @@
 import os
+import json
 import streamlit as st
 import pandas as pd
 from model_engine import load_all_data, calculate_projection, team_abbr_map
@@ -19,8 +20,9 @@ with st.expander("🚨 Breaking Injury News (Tap to Add Late Scratches & Recalcu
     )
 out_players_set = set(selected_out)
 
+# --- SECTION 1: TOP 15 PICKS ---
 st.header("🔥 Top 15 Picks (Top 5 PTS • Top 5 REB • Top 5 AST)")
-st.caption("Factors in: Teammate Injury Usage Spikes • Potential Ast & Reb Chances • 3PT/2PT Shot Profile • DvP • Vegas Total & Spread • B2B Rest")
+st.caption("Self-Calibrating Model • Teammate Injury Usage • Potential Ast & Reb Chances • 3PT/2PT Shot Profile • DvP • Vegas Total & Spread • B2B Rest")
 
 stat_filter = st.radio("Filter Leaderboard by Stat:", ["Balanced Top 15 (5 Each)", "All Combined", "PTS Only", "REB Only", "AST Only"], horizontal=True)
 
@@ -98,7 +100,8 @@ except FileNotFoundError:
 
 st.divider()
 
-st.header("📈 Model Track Record (Automated Daily Grading)")
+# --- SECTION 2: AUTOMATED WIN-LOSS BACKTEST & SELF-CALIBRATION ---
+st.header("📈 Model Track Record & Self-Calibration")
 if os.path.exists("pick_history.csv"):
     hist_df = pd.read_csv("pick_history.csv")
     graded = hist_df[hist_df["Result"].isin(["WIN", "LOSS"])]
@@ -112,6 +115,30 @@ if os.path.exists("pick_history.csv"):
     m3.metric("Pending Today", f"{(hist_df['Result'] == 'PENDING').sum()} Picks")
     m4.metric("Total Tracked", f"{len(hist_df)} Picks")
 
-    st.dataframe(hist_df.head(30), use_container_width=True, hide_index=True)
+    # Show Category Win Rates & Active Learned Multipliers
+    if os.path.exists("model_weights.json") and len(graded) > 0:
+        with open("model_weights.json", "r") as wf:
+            w_data = json.load(wf)
+
+        st.subheader("🧠 Learned Category Performance & Multipliers")
+        cat_rows = []
+        for s in ["PTS", "REB", "AST"]:
+            for side in ["OVER", "UNDER"]:
+                sub = graded[(graded["Stat"] == s) & (graded["Pick"] == side)]
+                c_wins = (sub["Result"] == "WIN").sum()
+                c_losses = (sub["Result"] == "LOSS").sum()
+                c_pct = (c_wins / (c_wins + c_losses) * 100) if (c_wins + c_losses) > 0 else 0.0
+                mult = w_data.get(f"{s}_{side}", 1.0)
+                status = "🔥 Boosted" if mult > 1.0 else ("❄️ Dampened" if mult < 1.0 else "⚖️ Neutral")
+                cat_rows.append({
+                    "Category": f"{s} {side}",
+                    "Record": f"{c_wins}W - {c_losses}L",
+                    "Win %": f"{c_pct:.1f}%" if (c_wins + c_losses) > 0 else "N/A",
+                    "Model Weight": f"{mult:.2f}x ({status})"
+                })
+        st.dataframe(pd.DataFrame(cat_rows), use_container_width=True, hide_index=True)
+
+    st.subheader("Recent Graded & Pending Picks")
+    st.dataframe(hist_df.head(45), use_container_width=True, hide_index=True)
 else:
     st.info("Pick history will appear here automatically after your first morning update (`grade_picks.py`).")
