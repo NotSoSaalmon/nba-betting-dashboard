@@ -1,6 +1,4 @@
 PLAYER_NAME,TEAM_NAME,STATUS
-Jock Landale,Atlanta Hawks,OUT
-Kingston Flemings,Atlanta Hawks,OUT
 Mouhamed Gueye,Atlanta Hawks,OUT
 Asa Newell,Atlanta Hawks,OUT
 Henri Veesaar,Atlanta Hawks,OUT
@@ -11,14 +9,14 @@ Caleb Wilson,Chicago Bulls,OUT
 Evan Mobley,Cleveland Cavaliers,OUT
 Sam Merrill,Cleveland Cavaliers,OUT
 Nae'Qwan Tomlin,Cleveland Cavaliers,OUT
-Santi Aldama,Dallas Mavericks,OUT
-Max Christie,Dallas Mavericks,OUT
-Kyrie Irving,Dallas Mavericks,OUT
 Dereck Lively II,Dallas Mavericks,OUT
 Tarik Biberovic,Dallas Mavericks,OUT
 Sergio de Larrea,Dallas Mavericks,OUT
 Julian Strawther,Denver Nuggets,OUT
+Taurean Prince,Detroit Pistons,OUT
+Ronald Holland II,Detroit Pistons,OUT
 Isaiah Joe,Detroit Pistons,OUT
+Duncan Robinson,Detroit Pistons,OUT
 Jalen Duren,Detroit Pistons,OUT
 Stephen Curry,Golden State Warriors,OUT
 Brandon Williams,Golden State Warriors,OUT
@@ -26,27 +24,24 @@ Kristaps Porzingis,Golden State Warriors,OUT
 Moses Moody,Golden State Warriors,OUT
 Jimmy Butler III,Golden State Warriors,OUT
 Clint Capela,Houston Rockets,OUT
-Fred VanVleet,Houston Rockets,OUT
 Tyrese Haliburton,Indiana Pacers,OUT
 Johnny Furphy,Indiana Pacers,OUT
 Ben Sheppard,Indiana Pacers,OUT
-Brandon Ingram,LA Clippers,OUT
 Yanic Konan Niederhauser,LA Clippers,OUT
+Brandon Ingram,LA Clippers,OUT
 Bradley Beal,LA Clippers,OUT
 Jordan Miller,LA Clippers,OUT
 Austin Reaves,Los Angeles Lakers,OUT
-GG Jackson,Memphis Grizzlies,OUT
-Ty Jerome,Memphis Grizzlies,OUT
-Quinten Post,Memphis Grizzlies,OUT
+Walker Kessler,Los Angeles Lakers,OUT
 Scotty Pippen Jr.,Memphis Grizzlies,OUT
+GG Jackson,Memphis Grizzlies,OUT
 Richie Saunders,Memphis Grizzlies,OUT
+Pelle Larsson,Miami Heat,OUT
 Ousmane Dieng,Milwaukee Bucks,OUT
-Ryan Rollins,Milwaukee Bucks,OUT
 Jaylen Clark,Minnesota Timberwolves,OUT
 Anthony Edwards,Minnesota Timberwolves,OUT
 Donte DiVincenzo,Minnesota Timberwolves,OUT
 Bryce McGowens,New Orleans Pelicans,OUT
-Bennedict Mathurin,New Orleans Pelicans,OUT
 Trey Murphy III,New Orleans Pelicans,OUT
 Trendon Watford,New Orleans Pelicans,OUT
 Dejounte Murray,New Orleans Pelicans,OUT
@@ -67,22 +62,16 @@ Chris Youngblood,Portland Trail Blazers,OUT
 Vit Krejci,Portland Trail Blazers,OUT
 Ja Morant,Portland Trail Blazers,OUT
 Shaedon Sharpe,Portland Trail Blazers,OUT
-De'Andre Hunter,Sacramento Kings,OUT
-Zach LaVine,Sacramento Kings,OUT
-Precious Achiuwa,Sacramento Kings,OUT
 Maxime Raynaud,Sacramento Kings,OUT
 Ben Simmons,Sacramento Kings,OUT
-De'Aaron Fox,San Antonio Spurs,OUT
 Tobias Harris,San Antonio Spurs,OUT
 Jayden Quaintance,San Antonio Spurs,OUT
 Nate Bittle,Toronto Raptors,OUT
 Kawhi Leonard,Toronto Raptors,OUT
 Jaxson Hayes,Utah Jazz,OUT
-Trey Alexander,Utah Jazz,OUT
 Lauri Markkanen,Utah Jazz,OUT
 Jusuf Nurkic,Utah Jazz,OUT
 Jaren Jackson Jr.,Utah Jazz,OUT
-Tre Johnson,Washington Wizards,OUT
 Tristan Vukcevic,Washington Wizards,OUT
 Reece Beekman,Washington Wizards,OUT
 Justin Champagnie,Washington Wizards,OUT
