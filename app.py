@@ -3,142 +3,155 @@ import json
 import streamlit as st
 import pandas as pd
 from model_engine import load_all_data, calculate_projection, team_abbr_map
+from nfl_engine import load_nfl_data, calculate_nfl_projection, nfl_abbr_map
 
-st.set_page_config(page_title="NBA Pro Betting Dashboard", layout="wide")
-st.title("🏀 NBA Pro Projection & Win-Probability Edges")
+st.set_page_config(page_title="Pro Betting Dashboard", layout="wide")
+st.title("🏆 NBA & NFL Pro Betting Dashboard")
 
-all_players_df, teams_df, shot_df, track_df, dvp_table, inj_df = load_all_data()
+tab_nba, tab_nfl = st.tabs(["🏀 NBA PrizePicks & Track Record", "🏈 NFL Props (Thu/Sun/Mon)"])
 
-all_names = sorted(all_players_df["PLAYER_NAME"].unique())
-default_out = [p for p in inj_df["PLAYER_NAME"].tolist() if p in all_names]
+with tab_nba:
+    all_players_df, teams_df, shot_df, track_df, dvp_table, inj_df = load_all_data()
+    all_names = sorted(all_players_df["PLAYER_NAME"].unique())
+    default_out = [p for p in inj_df["PLAYER_NAME"].tolist() if p in all_names]
 
-with st.expander("🚨 Breaking Injury News (Tap to Add Late Scratches & Recalculate Usage)", expanded=False):
-    selected_out = st.multiselect(
-        "Players Ruled OUT Tonight (Boosts Teammate Usage & Removes Out Players):",
-        options=all_names,
-        default=default_out
-    )
-out_players_set = set(selected_out)
+    with st.expander("🚨 Breaking Injury News (Tap to Add Late Scratches & Recalculate Usage)", expanded=False):
+        selected_out = st.multiselect("Players Ruled OUT Tonight:", options=all_names, default=default_out)
+    out_players_set = set(selected_out)
 
-# --- SECTION 1: TOP 15 PICKS ---
-st.header("🔥 Top 15 Picks (Top 5 PTS • Top 5 REB • Top 5 AST)")
-st.caption("Self-Calibrating Model • Teammate Injury Usage • Potential Ast & Reb Chances • 3PT/2PT Shot Profile • DvP • Vegas Total & Spread • B2B Rest")
+    st.header("🔥 NBA Top 15 Picks (Top 5 PTS • Top 5 REB • Top 5 AST)")
+    stat_filter = st.radio("Filter NBA Leaderboard:", ["Balanced Top 15 (5 Each)", "All Combined", "PTS Only", "REB Only", "AST Only"], horizontal=True)
 
-stat_filter = st.radio("Filter Leaderboard by Stat:", ["Balanced Top 15 (5 Each)", "All Combined", "PTS Only", "REB Only", "AST Only"], horizontal=True)
+    try:
+        odds_df = pd.read_csv("live_odds.csv")
+        edge_rows = []
+        for _, row in odds_df.iterrows():
+            p_name = row["PLAYER_NAME"]
+            if p_name in out_players_set:
+                continue
+            stat, line = row["STAT"], row["LINE"]
+            p_df = all_players_df[all_players_df["PLAYER_NAME"] == p_name]
+            if len(p_df) < 5:
+                continue
 
-try:
-    odds_df = pd.read_csv("live_odds.csv")
-    edge_rows = []
+            player_team_abbr = next(iter(p_df["TEAM_ABBREVIATION"]))
+            player_team_full = team_abbr_map.get(player_team_abbr, "")
+            is_home = (player_team_full == row["HOME_TEAM"])
+            opponent = row["AWAY_TEAM"] if is_home else row["HOME_TEAM"]
 
-    for _, row in odds_df.iterrows():
-        p_name = row["PLAYER_NAME"]
-        if p_name in out_players_set:
-            continue
+            proj, lean, win_prob, pct_edge, is_b2b, proj_min, p_pos, dvp_label, fit_label, usage_note = calculate_projection(
+                p_df, all_players_df, p_name, stat, opponent, line, teams_df, shot_df, track_df, dvp_table,
+                out_players_set=out_players_set, is_home=is_home,
+                game_total=row.get("GAME_TOTAL", 226.0), spread=row.get("SPREAD", 0.0)
+            )
+            valid_10 = p_df[p_df["MIN"] >= 15].head(10)
+            if len(valid_10) < 5:
+                valid_10 = p_df.head(10)
+            hits = (valid_10[stat] > line).sum() if lean == "OVER" else (valid_10[stat] < line).sum()
 
-        stat = row["STAT"]
-        line = row["LINE"]
-        p_df = all_players_df[all_players_df["PLAYER_NAME"] == p_name]
-        if len(p_df) < 5:
-            continue
+            edge_rows.append({
+                "Player": p_name, "Stat": stat, "Pick": lean, "Line": line, "Proj": round(proj, 1),
+                "Win Prob": f"{win_prob:.1f}%", "_sort": win_prob,
+                "Usage": usage_note if usage_note else "Normal",
+                "Matchup / Tracking": fit_label, "DvP": dvp_label,
+                "Opponent": opponent, "Rest": "B2B ⚠️" if is_b2b else "Rested",
+                "Hit Rate": f"{hits}/{len(valid_10)}", "Book": row["BOOK"]
+            })
 
-        player_team_abbr = next(iter(p_df["TEAM_ABBREVIATION"]))
-        player_team_full = team_abbr_map.get(player_team_abbr, "")
-        is_home = (player_team_full == row["HOME_TEAM"])
-        opponent = row["AWAY_TEAM"] if is_home else row["HOME_TEAM"]
-
-        proj, lean, win_prob, pct_edge, is_b2b, proj_min, p_pos, dvp_label, fit_label, usage_note = calculate_projection(
-            p_df, all_players_df, p_name, stat, opponent, line, teams_df, shot_df, track_df, dvp_table,
-            out_players_set=out_players_set, is_home=is_home,
-            game_total=row.get("GAME_TOTAL", 226.0), spread=row.get("SPREAD", 0.0)
-        )
-
-        valid_10 = p_df[p_df["MIN"] >= 15].head(10)
-        if len(valid_10) < 5:
-            valid_10 = p_df.head(10)
-        hits = (valid_10[stat] > line).sum() if lean == "OVER" else (valid_10[stat] < line).sum()
-
-        edge_rows.append({
-            "Player": p_name,
-            "Stat": stat,
-            "Pick": lean,
-            "Book Line": line,
-            "Model Proj": round(proj, 1),
-            "Win Prob": f"{win_prob:.1f}%",
-            "_sort_prob": win_prob,
-            "Usage Boost": usage_note if usage_note else "Normal",
-            "Matchup / Tracking": fit_label,
-            "DvP": dvp_label,
-            "Opponent": opponent,
-            "Rest": "B2B ⚠️" if is_b2b else "Rested",
-            "Hit Rate": f"{hits}/{len(valid_10)}",
-            "Book": row["BOOK"]
-        })
-
-    if edge_rows:
-        full_edges_df = pd.DataFrame(edge_rows).sort_values(by="_sort_prob", ascending=False)
-
-        if stat_filter == "Balanced Top 15 (5 Each)":
-            pts_top = full_edges_df[full_edges_df["Stat"] == "PTS"].head(5)
-            reb_top = full_edges_df[full_edges_df["Stat"] == "REB"].head(5)
-            ast_top = full_edges_df[full_edges_df["Stat"] == "AST"].head(5)
-            display_df = pd.concat([pts_top, reb_top, ast_top]).sort_values(by="_sort_prob", ascending=False)
-        elif stat_filter == "PTS Only":
-            display_df = full_edges_df[full_edges_df["Stat"] == "PTS"].head(15)
-        elif stat_filter == "REB Only":
-            display_df = full_edges_df[full_edges_df["Stat"] == "REB"].head(15)
-        elif stat_filter == "AST Only":
-            display_df = full_edges_df[full_edges_df["Stat"] == "AST"].head(15)
+        if edge_rows:
+            full_df = pd.DataFrame(edge_rows).sort_values(by="_sort", ascending=False)
+            if stat_filter == "Balanced Top 15 (5 Each)":
+                disp = pd.concat([full_df[full_df["Stat"] == s].head(5) for s in ["PTS", "REB", "AST"]]).sort_values(by="_sort", ascending=False)
+            elif stat_filter in ["PTS Only", "REB Only", "AST Only"]:
+                disp = full_df[full_df["Stat"] == stat_filter.split(" ")].head(15)
+            else:
+                disp = full_df.head(15)
+            st.dataframe(disp.drop(columns=["_sort"]), use_container_width=True, hide_index=True)
         else:
-            display_df = full_edges_df.head(15)
+            st.info("No matching NBA player props found yet.")
+    except FileNotFoundError:
+        st.warning("Run `fetch_odds.py` to load today's NBA lines.")
 
-        st.dataframe(display_df.drop(columns=["_sort_prob"]), use_container_width=True, hide_index=True)
+    st.divider()
+    st.header("📈 NBA Track Record & Self-Calibration")
+    if os.path.exists("pick_history.csv"):
+        hist_df = pd.read_csv("pick_history.csv")
+        graded = hist_df[hist_df["Result"].isin(["WIN", "LOSS"])]
+        wins, losses = (graded["Result"] == "WIN").sum(), (graded["Result"] == "LOSS").sum()
+        win_pct = (wins / (wins + losses) * 100) if (wins + losses) > 0 else 0.0
+
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("Overall Record", f"{wins}W - {losses}L")
+        m2.metric("Win Rate (52.4% BE)", f"{win_pct:.1f}%")
+        m3.metric("Pending Today", f"{(hist_df['Result'] == 'PENDING').sum()}")
+        m4.metric("Total Tracked", f"{len(hist_df)}")
+
+        if os.path.exists("model_weights.json") and len(graded) > 0:
+            with open("model_weights.json", "r") as wf:
+                w_data = json.load(wf)
+            cat_rows = []
+            for s in ["PTS", "REB", "AST"]:
+                for side in ["OVER", "UNDER"]:
+                    sub = graded[(graded["Stat"] == s) & (graded["Pick"] == side)]
+                    cw, cl = (sub["Result"] == "WIN").sum(), (sub["Result"] == "LOSS").sum()
+                    cp = (cw / (cw + cl) * 100) if (cw + cl) > 0 else 0.0
+                    mult = w_data.get(f"{s}_{side}", 1.0)
+                    cat_rows.append({
+                        "Category": f"{s} {side}", "Record": f"{cw}W - {cl}L",
+                        "Win %": f"{cp:.1f}%" if (cw + cl) > 0 else "N/A",
+                        "Model Weight": f"{mult:.2f}x"
+                    })
+            st.dataframe(pd.DataFrame(cat_rows), use_container_width=True, hide_index=True)
+        st.dataframe(hist_df.head(45), use_container_width=True, hide_index=True)
+
+with tab_nfl:
+    st.header("🏈 NFL Top PrizePicks Edges (Thu / Sun / Mon)")
+    st.caption("Automatically updates on NFL game days (Thu, Sun, Mon) to save free API credits • Weighs L3/L6 Form, Carries/Targets, DvP & Vegas Totals")
+
+    if os.path.exists("nfl_player_logs.csv") and os.path.exists("nfl_live_odds.csv"):
+        nfl_df, nfl_dvp = load_nfl_data()
+        nfl_odds = pd.read_csv("nfl_live_odds.csv")
+        nfl_rows = []
+
+        for _, row in nfl_odds.iterrows():
+            p_name, stat, line = row["PLAYER_NAME"], row["STAT"], row["LINE"]
+            p_df = nfl_df[nfl_df["player_display_name"] == p_name]
+            if len(p_df) < 3:
+                continue
+
+            team_abbr = next(iter(p_df["recent_team"]))
+            team_full = nfl_abbr_map.get(team_abbr, "")
+            opp_full = row["AWAY_TEAM"] if team_full == row["HOME_TEAM"] else row["HOME_TEAM"]
+
+            proj, lean, win_prob, vol_note, dvp_label, hit_str = calculate_nfl_projection(
+                p_df, stat, opp_full, line, nfl_dvp, game_total=row.get("GAME_TOTAL", 44.5)
+            )
+            nfl_rows.append({
+                "Player": p_name, "Stat": stat, "Pick": lean, "Line": line, "Proj": round(proj, 1),
+                "Win Prob": f"{win_prob:.1f}%", "_sort": win_prob,
+                "Volume": vol_note, "DvP": dvp_label, "Opponent": opp_full,
+                "L6 Hit Rate": hit_str, "Book": row["BOOK"]
+            })
+
+        if nfl_rows:
+            nfl_top = pd.DataFrame(nfl_rows).sort_values(by="_sort", ascending=False).head(15).drop(columns=["_sort"])
+            st.dataframe(nfl_top, use_container_width=True, hide_index=True)
+        else:
+            st.info("No matching NFL props found for the current slate.")
     else:
-        st.info("No matching player props found for tonight's slate yet.")
+        st.info("NFL PrizePicks lines automatically load on **Thursdays, Sundays, and Mondays** at 5:00 AM (saving API credits on Tue/Wed/Fri/Sat).")
 
-except FileNotFoundError:
-    st.warning("Run `python fetch_odds.py` to load tonight's live sportsbook lines.")
+cat << 'EOF' > ~/nba_project/daily_update.sh
+#!/bin/bash
+cd /Users/rasheedwhiters/nba_project
+/Users/rasheedwhiters/nba_project/venv/bin/python fetch_betting_data.py
+/Users/rasheedwhiters/nba_project/venv/bin/python fetch_injuries.py
+/Users/rasheedwhiters/nba_project/venv/bin/python fetch_odds.py
+/Users/rasheedwhiters/nba_project/venv/bin/python grade_picks.py
+/Users/rasheedwhiters/nba_project/venv/bin/python tune_weights.py
+/Users/rasheedwhiters/nba_project/venv/bin/python fetch_nfl_data.py
+/Users/rasheedwhiters/nba_project/venv/bin/python fetch_nfl_odds.py
 
-st.divider()
-
-# --- SECTION 2: AUTOMATED WIN-LOSS BACKTEST & SELF-CALIBRATION ---
-st.header("📈 Model Track Record & Self-Calibration")
-if os.path.exists("pick_history.csv"):
-    hist_df = pd.read_csv("pick_history.csv")
-    graded = hist_df[hist_df["Result"].isin(["WIN", "LOSS"])]
-    wins = (graded["Result"] == "WIN").sum()
-    losses = (graded["Result"] == "LOSS").sum()
-    win_pct = (wins / (wins + losses) * 100) if (wins + losses) > 0 else 0.0
-
-    m1, m2, m3, m4 = st.columns(4)
-    m1.metric("Overall Record", f"{wins}W - {losses}L")
-    m2.metric("Win Rate (52.4% Break-Even)", f"{win_pct:.1f}%")
-    m3.metric("Pending Today", f"{(hist_df['Result'] == 'PENDING').sum()} Picks")
-    m4.metric("Total Tracked", f"{len(hist_df)} Picks")
-
-    # Show Category Win Rates & Active Learned Multipliers
-    if os.path.exists("model_weights.json") and len(graded) > 0:
-        with open("model_weights.json", "r") as wf:
-            w_data = json.load(wf)
-
-        st.subheader("🧠 Learned Category Performance & Multipliers")
-        cat_rows = []
-        for s in ["PTS", "REB", "AST"]:
-            for side in ["OVER", "UNDER"]:
-                sub = graded[(graded["Stat"] == s) & (graded["Pick"] == side)]
-                c_wins = (sub["Result"] == "WIN").sum()
-                c_losses = (sub["Result"] == "LOSS").sum()
-                c_pct = (c_wins / (c_wins + c_losses) * 100) if (c_wins + c_losses) > 0 else 0.0
-                mult = w_data.get(f"{s}_{side}", 1.0)
-                status = "🔥 Boosted" if mult > 1.0 else ("❄️ Dampened" if mult < 1.0 else "⚖️ Neutral")
-                cat_rows.append({
-                    "Category": f"{s} {side}",
-                    "Record": f"{c_wins}W - {c_losses}L",
-                    "Win %": f"{c_pct:.1f}%" if (c_wins + c_losses) > 0 else "N/A",
-                    "Model Weight": f"{mult:.2f}x ({status})"
-                })
-        st.dataframe(pd.DataFrame(cat_rows), use_container_width=True, hide_index=True)
-
-    st.subheader("Recent Graded & Pending Picks")
-    st.dataframe(hist_df.head(45), use_container_width=True, hide_index=True)
-else:
-    st.info("Pick history will appear here automatically after your first morning update (`grade_picks.py`).")
+git add *.csv *.json *.py
+git commit -m "Daily 5AM NBA & NFL data refresh"
+git push origin main
