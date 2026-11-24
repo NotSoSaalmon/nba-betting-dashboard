@@ -1,22 +1,142 @@
 Date,Player,Opponent,Stat,Pick,Book Line,Model Proj,Win Prob %,Actual,Result
-2026-11-16,Tristan da Silva,Boston Celtics,PTS,OVER,12.5,16.3,66.5,,PENDING
-2026-11-16,Ayo Dosunmu,Portland Trail Blazers,PTS,OVER,17.5,21.5,66.5,,PENDING
-2026-11-16,Draymond Green,New Orleans Pelicans,AST,OVER,5.5,6.9,66.5,,PENDING
-2026-11-16,Franz Wagner,Boston Celtics,AST,OVER,6.5,8.6,66.5,,PENDING
-2026-11-16,Cedric Coward,Washington Wizards,REB,OVER,7.5,8.6,65.7,,PENDING
-2026-11-16,Aaron Gordon,Phoenix Suns,PTS,UNDER,14.5,12.3,65.6,,PENDING
-2026-11-16,Anthony Black,Boston Celtics,REB,OVER,4.5,5.5,65.5,,PENDING
-2026-11-16,Zach Edey,Washington Wizards,REB,OVER,7.5,8.6,65.1,,PENDING
-2026-11-16,Joel Embiid,Brooklyn Nets,PTS,UNDER,22.5,19.9,64.8,,PENDING
-2026-11-16,Saddiq Bey,Golden State Warriors,REB,UNDER,5.5,4.6,63.8,,PENDING
-2026-11-16,Davion Mitchell,Houston Rockets,PTS,OVER,13.5,15.4,63.7,,PENDING
-2026-11-16,Jayson Tatum,Orlando Magic,REB,UNDER,6.5,5.6,63.4,,PENDING
-2026-11-16,Jaden McDaniels,Portland Trail Blazers,AST,OVER,3.5,4.2,62.3,,PENDING
-2026-11-16,Kevin Durant,Miami Heat,AST,OVER,3.5,4.1,61.1,,PENDING
-2026-11-16,LaMelo Ball,Portland Trail Blazers,AST,UNDER,6.5,5.9,60.9,,PENDING
+2026-11-24,Franz Wagner,Detroit Pistons,PTS,OVER,22.5,26.6,66.5,,PENDING
+2026-11-24,Karl-Anthony Towns,Cleveland Cavaliers,PTS,OVER,20.5,23.2,66.5,,PENDING
+2026-11-24,Tristan da Silva,Detroit Pistons,PTS,OVER,10.5,13.1,66.5,,PENDING
+2026-11-24,Daniel Gafford,Denver Nuggets,REB,UNDER,7.5,5.9,66.5,,PENDING
+2026-11-24,Franz Wagner,Detroit Pistons,AST,OVER,6.5,8.2,66.5,,PENDING
+2026-11-24,Zaccharie Risacher,Denver Nuggets,REB,OVER,3.5,4.5,65.6,,PENDING
+2026-11-24,Karl-Anthony Towns,Cleveland Cavaliers,REB,OVER,12.5,13.7,65.2,,PENDING
+2026-11-24,Naji Marshall,Denver Nuggets,AST,OVER,2.5,3.3,63.9,,PENDING
+2026-11-24,Davion Mitchell,Philadelphia 76ers,PTS,OVER,14.5,16.4,63.6,,PENDING
+2026-11-24,Tristan da Silva,Detroit Pistons,REB,OVER,3.5,4.4,63.3,,PENDING
+2026-11-24,Peyton Watson,New York Knicks,PTS,UNDER,11.5,9.7,62.9,,PENDING
+2026-11-24,Payton Pritchard,Washington Wizards,AST,OVER,3.5,4.2,62.7,,PENDING
+2026-11-24,Karl-Anthony Towns,Cleveland Cavaliers,AST,OVER,3.5,4.2,62.3,,PENDING
+2026-11-24,Franz Wagner,Detroit Pistons,REB,OVER,6.5,7.3,62.0,,PENDING
+2026-11-24,James Harden,New York Knicks,AST,UNDER,6.5,6.0,60.0,,PENDING
+2026-11-23,Donovan Mitchell,Chicago Bulls,PTS,OVER,25.5,28.4,64.5,28.0,WIN
+2026-11-23,Devin Vassell,Sacramento Kings,PTS,OVER,10.5,12.5,64.2,16.0,WIN
+2026-11-23,James Harden,Chicago Bulls,AST,OVER,6.0,6.7,62.6,5.0,LOSS
+2026-11-23,Mo Bamba,Los Angeles Lakers,REB,OVER,7.5,8.7,61.7,7.0,LOSS
+2026-11-23,Jakob Poeltl,Milwaukee Bucks,REB,OVER,7.5,8.3,61.0,10.0,WIN
+2026-11-23,Matas Buzelis,Cleveland Cavaliers,PTS,OVER,15.5,17.1,60.8,15.0,LOSS
+2026-11-23,Deni Avdija,Philadelphia 76ers,PTS,OVER,24.5,26.1,60.4,31.0,WIN
+2026-11-23,Jaylen Brown,Portland Trail Blazers,REB,UNDER,7.0,6.2,60.4,2.0,WIN
+2026-11-23,Tyrese Maxey,Portland Trail Blazers,AST,UNDER,6.5,5.9,60.4,5.0,WIN
+2026-11-23,Naz Reid,Memphis Grizzlies,REB,UNDER,8.5,7.8,59.9,6.0,WIN
+2026-11-23,Terrence Shannon Jr,Brooklyn Nets,PTS,OVER,13.0,14.9,59.8,17.0,WIN
+2026-11-23,Luka Dončić,Utah Jazz,AST,OVER,7.5,8.1,59.8,8.0,WIN
+2026-11-23,Jarrett Allen,Chicago Bulls,REB,OVER,9.5,10.1,59.3,4.0,LOSS
+2026-11-23,Devin Vassell,Sacramento Kings,AST,OVER,2.5,2.9,58.2,2.0,LOSS
+2026-11-23,Darius Acuff Jr.,San Antonio Spurs,AST,UNDER,8.0,7.4,58.0,4.0,WIN
+2026-11-22,Karl-Anthony Towns,Indiana Pacers,PTS,OVER,21.0,23.4,66.5,30.0,WIN
+2026-11-22,Jayson Tatum,Golden State Warriors,PTS,OVER,25.5,27.8,62.2,27.0,WIN
+2026-11-22,Mikal Bridges,Indiana Pacers,PTS,OVER,9.0,10.6,61.5,8.0,LOSS
+2026-11-22,Andrew Nembhard,New York Knicks,PTS,UNDER,16.0,14.5,60.7,16.0,PUSH
+2026-11-22,Anthony Davis,Orlando Magic,REB,UNDER,11.0,10.1,60.6,7.0,WIN
+2026-11-22,Jayson Tatum,Golden State Warriors,AST,OVER,6.5,7.1,59.9,6.0,LOSS
+2026-11-22,John Collins,Atlanta Hawks,REB,OVER,5.0,5.8,59.8,6.0,WIN
+2026-11-22,Nikola Jokić,Chicago Bulls,PTS,OVER,25.0,26.3,58.7,37.0,WIN
+2026-11-22,Isaiah Hartenstein,Miami Heat,REB,UNDER,12.0,11.2,58.3,8.0,WIN
+2026-11-22,Karl-Anthony Towns,Indiana Pacers,REB,OVER,14.0,14.7,58.1,13.0,LOSS
+2026-11-22,Josh Giddey,Denver Nuggets,AST,OVER,8.5,9.2,58.0,22.0,WIN
+2026-11-22,Cooper Flagg,Utah Jazz,AST,UNDER,6.5,6.0,57.8,4.0,WIN
+2026-11-22,Trae Young,Orlando Magic,AST,OVER,7.5,8.1,57.8,11.0,WIN
+2026-11-22,Pascal Siakam,New York Knicks,AST,UNDER,4.0,3.6,57.8,1.0,WIN
+2026-11-22,Jalen Smith,Denver Nuggets,REB,UNDER,8.0,7.4,57.4,4.0,WIN
+2026-11-21,Joel Embiid,Milwaukee Bucks,AST,OVER,3.0,4.3,66.5,9.0,WIN
+2026-11-21,Daniel Gafford,LA Clippers,REB,OVER,4.0,5.1,64.5,10.0,WIN
+2026-11-21,Joel Embiid,Milwaukee Bucks,PTS,OVER,19.5,22.5,64.0,26.0,WIN
+2026-11-21,Kyle Kuzma,Philadelphia 76ers,REB,OVER,4.0,4.9,63.5,5.0,WIN
+2026-11-21,VJ Edgecombe,Milwaukee Bucks,REB,OVER,6.0,6.9,62.6,3.0,LOSS
+2026-11-21,Jaime Jaquez Jr.,Philadelphia 76ers,REB,OVER,4.0,4.8,61.9,0.0,LOSS
+2026-11-21,Kentavious Caldwell-Pope,Milwaukee Bucks,PTS,OVER,5.0,6.2,58.9,11.0,WIN
+2026-11-21,Precious Achiuwa,Boston Celtics,PTS,UNDER,11.0,9.7,58.7,5.0,WIN
+2026-11-21,Kel'el Ware,Philadelphia 76ers,PTS,OVER,8.5,9.7,58.5,6.0,LOSS
+2026-11-21,Joel Embiid,Milwaukee Bucks,REB,OVER,8.0,8.6,58.3,17.0,WIN
+2026-11-21,Darius Acuff Jr.,Boston Celtics,PTS,UNDER,26.5,25.0,57.8,21.0,WIN
+2026-11-21,De'Aaron Fox,New Orleans Pelicans,AST,OVER,4.5,5.0,57.6,10.0,WIN
+2026-11-21,Devin Vassell,New Orleans Pelicans,AST,OVER,2.5,2.9,57.6,2.0,LOSS
+2026-11-21,Jalen Brunson,Portland Trail Blazers,AST,UNDER,6.5,6.1,57.2,5.0,WIN
+2026-11-21,Myles Turner,Philadelphia 76ers,AST,UNDER,3.0,2.6,56.7,5.0,LOSS
+2026-11-20,Onyeka Okongwu,Charlotte Hornets,REB,UNDER,9.5,8.0,65.9,7.0,WIN
+2026-11-20,Kyshawn George,Chicago Bulls,REB,OVER,4.0,4.8,62.0,7.0,WIN
+2026-11-20,Julius Randle,Orlando Magic,AST,OVER,4.0,4.6,60.7,6.0,WIN
+2026-11-20,Anthony Davis,Chicago Bulls,REB,UNDER,10.5,9.6,60.0,11.0,LOSS
+2026-11-20,Aday Mara,New Orleans Pelicans,PTS,OVER,11.0,12.3,59.6,22.0,WIN
+2026-11-20,Luka Dončić,Sacramento Kings,AST,OVER,7.5,8.1,59.6,8.0,WIN
+2026-11-20,Jaxson Hayes,Phoenix Suns,REB,OVER,6.5,7.1,59.4,14.0,WIN
+2026-11-20,Kevin Durant,Denver Nuggets,PTS,OVER,20.0,21.3,59.2,16.0,LOSS
+2026-11-20,Matas Buzelis,Washington Wizards,PTS,OVER,15.5,16.9,59.1,9.0,LOSS
+2026-11-20,Jarrett Allen,Indiana Pacers,REB,OVER,10.0,10.6,59.0,8.0,LOSS
+2026-11-20,Shai Gilgeous-Alexander,New Orleans Pelicans,PTS,OVER,33.5,35.3,58.7,40.0,WIN
+2026-11-20,Trae Young,Chicago Bulls,PTS,OVER,15.5,17.3,58.4,16.0,WIN
+2026-11-20,Scottie Barnes,Detroit Pistons,AST,OVER,4.5,4.9,58.3,5.0,WIN
+2026-11-20,Miles Bridges,Utah Jazz,AST,UNDER,3.5,3.1,57.8,4.0,LOSS
+2026-11-20,Cade Cunningham,Toronto Raptors,AST,OVER,7.5,7.9,57.7,9.0,WIN
+2026-11-19,Donovan Clingan,Milwaukee Bucks,REB,OVER,11.0,12.0,63.4,13.0,WIN
+2026-11-19,Victor Wembanyama,LA Clippers,REB,OVER,12.5,13.5,59.1,11.0,LOSS
+2026-11-19,OG Anunoby,Minnesota Timberwolves,PTS,UNDER,16.5,15.3,58.5,15.0,WIN
+2026-11-19,Ayo Dosunmu,New York Knicks,PTS,UNDER,21.5,20.0,58.5,6.0,WIN
+2026-11-19,Yaxel Lendeborg,Memphis Grizzlies,REB,OVER,6.5,7.2,58.2,8.0,WIN
+2026-11-19,Cameron Boozer,Golden State Warriors,REB,OVER,8.5,9.0,57.5,6.0,LOSS
+2026-11-19,Jaylen Wells,Golden State Warriors,PTS,OVER,9.0,10.1,57.3,22.0,WIN
+2026-11-19,LaMelo Ball,New York Knicks,PTS,UNDER,20.0,18.7,56.7,15.0,WIN
+2026-11-19,Brandin Podziemski,Memphis Grizzlies,REB,UNDER,5.0,4.6,56.6,3.0,WIN
+2026-11-19,Damian Lillard,Milwaukee Bucks,PTS,OVER,20.5,21.5,56.5,33.0,WIN
+2026-11-19,De'Aaron Fox,LA Clippers,AST,OVER,4.5,4.9,56.3,5.0,WIN
+2026-11-19,Jonathan Kuminga,New York Knicks,AST,UNDER,3.0,2.7,56.1,3.0,PUSH
+2026-11-19,Jaime Jaquez Jr.,Portland Trail Blazers,AST,UNDER,3.5,3.2,55.1,2.0,WIN
+2026-11-19,Yaxel Lendeborg,Memphis Grizzlies,AST,OVER,3.0,3.3,55.1,7.0,WIN
+2026-11-19,Darius Garland,San Antonio Spurs,AST,UNDER,7.0,6.7,54.9,5.0,WIN
+2026-11-18,Luka Dončić,Utah Jazz,PTS,OVER,40.0,43.5,64.1,29.0,LOSS
+2026-11-18,Julius Randle,Chicago Bulls,PTS,OVER,20.5,22.6,62.1,17.0,LOSS
+2026-11-18,Luka Dončić,Utah Jazz,AST,OVER,7.5,8.2,61.3,7.0,LOSS
+2026-11-18,Domantas Sabonis,Phoenix Suns,REB,OVER,12.0,13.3,60.5,13.0,WIN
+2026-11-18,Amen Thompson,Indiana Pacers,PTS,OVER,15.5,17.0,60.4,15.0,LOSS
+2026-11-18,Amen Thompson,Indiana Pacers,REB,OVER,6.0,6.7,60.0,9.0,WIN
+2026-11-18,Daniss Jenkins,New Orleans Pelicans,PTS,OVER,14.5,16.7,59.8,17.0,WIN
+2026-11-18,Franz Wagner,Philadelphia 76ers,PTS,OVER,25.0,26.8,59.2,27.0,WIN
+2026-11-18,Ace Bailey,Los Angeles Lakers,REB,OVER,5.0,5.6,59.0,8.0,WIN
+2026-11-18,Kelly Oubre Jr.,Houston Rockets,REB,OVER,3.0,3.6,58.6,4.0,WIN
+2026-11-18,Immanuel Quickley,Washington Wizards,AST,OVER,5.5,6.0,58.4,5.0,LOSS
+2026-11-18,Yaxel Lendeborg,Dallas Mavericks,REB,OVER,6.5,7.2,58.0,5.0,LOSS
+2026-11-18,Keyonte George,Los Angeles Lakers,AST,OVER,6.5,7.1,57.6,10.0,WIN
+2026-11-18,Trae Young,Toronto Raptors,AST,OVER,8.0,8.6,57.5,8.0,PUSH
+2026-11-18,Bam Adebayo,Milwaukee Bucks,AST,OVER,3.0,3.4,57.3,2.0,LOSS
+2026-11-17,Luka Dončić,Charlotte Hornets,PTS,OVER,41.5,44.8,63.1,36.0,LOSS
+2026-11-17,LaMelo Ball,Portland Trail Blazers,AST,UNDER,5.5,4.8,62.2,2.0,WIN
+2026-11-17,OG Anunoby,Toronto Raptors,REB,OVER,5.0,5.7,61.0,4.0,LOSS
+2026-11-17,Collin Murray-Boyles,New York Knicks,REB,OVER,5.0,5.9,60.1,1.0,LOSS
+2026-11-17,RJ Barrett,New York Knicks,PTS,UNDER,20.5,19.0,59.4,22.0,LOSS
+2026-11-17,Karl-Anthony Towns,Toronto Raptors,PTS,OVER,22.0,23.2,58.7,16.0,LOSS
+2026-11-17,Jaden McDaniels,Portland Trail Blazers,PTS,UNDER,17.5,16.3,58.7,22.0,LOSS
+2026-11-17,Brook Lopez,Utah Jazz,REB,OVER,5.0,5.6,58.7,6.0,WIN
+2026-11-17,Josh Hart,Toronto Raptors,PTS,UNDER,6.5,5.4,58.2,5.0,WIN
+2026-11-17,Max Strus,Utah Jazz,AST,UNDER,4.0,3.6,57.9,1.0,WIN
+2026-11-17,Sandro Mamukelashvili,Charlotte Hornets,REB,UNDER,4.5,4.0,57.8,3.0,WIN
+2026-11-17,Scottie Barnes,New York Knicks,AST,UNDER,5.0,4.6,57.2,2.0,WIN
+2026-11-17,Terrence Shannon Jr,Portland Trail Blazers,REB,UNDER,4.0,3.5,56.9,1.0,WIN
+2026-11-17,Luka Dončić,Charlotte Hornets,AST,OVER,8.0,8.4,56.9,7.0,LOSS
+2026-11-17,Jalen Brunson,Toronto Raptors,AST,OVER,6.5,7.0,56.9,5.0,LOSS
+2026-11-16,Tristan da Silva,Boston Celtics,PTS,OVER,12.5,16.3,66.5,13.0,WIN
+2026-11-16,Ayo Dosunmu,Portland Trail Blazers,PTS,OVER,17.5,21.5,66.5,8.0,LOSS
+2026-11-16,Draymond Green,New Orleans Pelicans,AST,OVER,5.5,6.9,66.5,5.0,LOSS
+2026-11-16,Franz Wagner,Boston Celtics,AST,OVER,6.5,8.6,66.5,9.0,WIN
+2026-11-16,Cedric Coward,Washington Wizards,REB,OVER,7.5,8.6,65.7,8.0,WIN
+2026-11-16,Aaron Gordon,Phoenix Suns,PTS,UNDER,14.5,12.3,65.6,11.0,WIN
+2026-11-16,Anthony Black,Boston Celtics,REB,OVER,4.5,5.5,65.5,2.0,LOSS
+2026-11-16,Zach Edey,Washington Wizards,REB,OVER,7.5,8.6,65.1,10.0,WIN
+2026-11-16,Joel Embiid,Brooklyn Nets,PTS,UNDER,22.5,19.9,64.8,37.0,LOSS
+2026-11-16,Saddiq Bey,Golden State Warriors,REB,UNDER,5.5,4.6,63.8,6.0,LOSS
+2026-11-16,Davion Mitchell,Houston Rockets,PTS,OVER,13.5,15.4,63.7,16.0,WIN
+2026-11-16,Jayson Tatum,Orlando Magic,REB,UNDER,6.5,5.6,63.4,12.0,LOSS
+2026-11-16,Jaden McDaniels,Portland Trail Blazers,AST,OVER,3.5,4.2,62.3,3.0,LOSS
+2026-11-16,Kevin Durant,Miami Heat,AST,OVER,3.5,4.1,61.1,3.0,LOSS
+2026-11-16,LaMelo Ball,Portland Trail Blazers,AST,UNDER,6.5,5.9,60.9,0.0,WIN
 2026-11-15,Reed Sheppard,Washington Wizards,PTS,UNDER,14.5,11.4,66.5,11.0,WIN
 2026-11-15,Reed Sheppard,Washington Wizards,AST,UNDER,4.5,3.4,66.5,6.0,LOSS
-2026-11-15,Andrew Nembhard,Philadelphia 76ers,AST,OVER,7.5,9.0,66.2,,PENDING
+2026-11-15,Andrew Nembhard,Philadelphia 76ers,AST,OVER,7.5,9.0,66.2,8.0,WIN
 2026-11-15,Coby White,Los Angeles Clippers,PTS,UNDER,14.5,11.8,65.7,21.0,LOSS
 2026-11-15,Keyonte George,San Antonio Spurs,REB,OVER,3.5,4.5,65.6,4.0,WIN
 2026-11-15,Dean Wade,Indiana Pacers,REB,UNDER,5.5,4.5,65.2,7.0,LOSS

@@ -1,10 +1,10 @@
 {
-  "PTS_OVER": 1.0,
-  "PTS_UNDER": 1.0,
-  "REB_OVER": 1.0,
-  "REB_UNDER": 1.0,
-  "AST_OVER": 0.9856,
-  "AST_UNDER": 1.0,
-  "global_bias_adj": 0.0173,
-  "sample_size": 44
+  "PTS_OVER": 1.0488,
+  "PTS_UNDER": 1.0231,
+  "REB_OVER": 0.9937,
+  "REB_UNDER": 1.0856,
+  "AST_OVER": 1.0023,
+  "AST_UNDER": 1.1091,
+  "global_bias_adj": -0.0004,
+  "sample_size": 162
 }
