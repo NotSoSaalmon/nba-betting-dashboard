@@ -1,6 +1,8 @@
 import requests
 import pandas as pd
 import tomllib
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 with open("/Users/rasheedwhiters/nba_project/.streamlit/secrets.toml", "rb") as f:
     secrets = tomllib.load(f)
@@ -9,6 +11,10 @@ API_KEY = secrets["ODDS_API_KEY"].strip()
 s = chr(47)
 domain = ".".join(["api", "the-odds-api", "com"])
 host = "https:" + s + s + domain
+
+# Anchor to US Central Time (America/Chicago) so evening NBA games match today's calendar date
+local_tz = ZoneInfo("America/Chicago")
+today_str = datetime.now(local_tz).strftime("%Y-%m-%d")
 
 # 1. Fetch Game Lines (Spreads & Totals)
 game_odds_url = s.join([host, "v4", "sports", "basketball_nba", "odds"])
@@ -35,20 +41,26 @@ if g_resp.status_code == 200:
             break
         game_env[eid] = {"GAME_TOTAL": total_val, "SPREAD": spread_val}
 
-# 2. Fetch Player Props from PrizePicks (us_dfs) + DraftKings/FanDuel fallback
+# 2. Fetch Events & Keep ONLY Games Tipping Off Today
 events_url = s.join([host, "v4", "sports", "basketball_nba", "events"])
 resp = requests.get(events_url, params={"apiKey": API_KEY}, timeout=15)
 if resp.status_code != 200:
     print(f"API Error {resp.status_code}: {resp.text}")
     exit()
 
-events = resp.json()
-print(f"Found {len(events)} NBA games. Fetching PrizePicks + sportsbook lines...")
+todays_events = []
+for ev in resp.json():
+    tip_utc = datetime.fromisoformat(ev["commence_time"].replace("Z", "+00:00"))
+    tip_local_date = tip_utc.astimezone(local_tz).strftime("%Y-%m-%d")
+    if tip_local_date == today_str:
+        todays_events.append(ev)
+
+print(f"Found {len(todays_events)} NBA games scheduled specifically for {today_str}.")
 
 rows = []
 market_map = {"player_points": "PTS", "player_rebounds": "REB", "player_assists": "AST"}
 
-for event in events:
+for event in todays_events:
     event_id = event["id"]
     home_team = event["home_team"]
     away_team = event["away_team"]
@@ -69,7 +81,6 @@ for event in events:
     for book in data.get("bookmakers", []):
         book_key = book["key"]
         book_name = book["title"]
-        # Priority 0 = PrizePicks, Priority 1 = DraftKings/FanDuel fallback
         priority = 0 if book_key == "prizepicks" else 1
 
         for market in book.get("markets", []):
@@ -77,6 +88,7 @@ for event in events:
             for outcome in market.get("outcomes", []):
                 if outcome["name"] == "Over":
                     rows.append({
+                        "FETCH_DATE": today_str,
                         "PLAYER_NAME": outcome["description"],
                         "STAT": stat_code,
                         "LINE": outcome["point"],
@@ -90,10 +102,10 @@ for event in events:
 
 odds_df = pd.DataFrame(rows)
 if not odds_df.empty:
-    # Sort so PrizePicks always comes first when deduplicating
     odds_df = odds_df.sort_values(by="_priority").drop_duplicates(subset=["PLAYER_NAME", "STAT"]).drop(columns=["_priority"])
     odds_df.to_csv("/Users/rasheedwhiters/nba_project/live_odds.csv", index=False)
-    pp_count = (odds_df["BOOK"] == "PrizePicks").sum()
-    print(f"Saved {len(odds_df)} live props ({pp_count} from PrizePicks) to live_odds.csv!")
+    print(f"Saved {len(odds_df)} PrizePicks/book props strictly for {today_str}!")
 else:
-    print("No player props posted yet for today's slate.")
+    # Overwrite with empty table if there are 0 NBA games today (e.g., All-Star break / Thanksgiving)
+    pd.DataFrame(columns=["FETCH_DATE", "PLAYER_NAME", "STAT", "LINE", "BOOK", "HOME_TEAM", "AWAY_TEAM", "GAME_TOTAL", "SPREAD"]).to_csv("/Users/rasheedwhiters/nba_project/live_odds.csv", index=False)
+    print(f"No NBA games scheduled for {today_str} — cleared old slate.")

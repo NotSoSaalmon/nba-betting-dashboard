@@ -24,6 +24,9 @@ with tab_nba:
 
     try:
         odds_df = pd.read_csv("live_odds.csv")
+        if "FETCH_DATE" in odds_df.columns and not odds_df.empty:
+            slate_dt = next(iter(odds_df["FETCH_DATE"]))
+            st.caption(f"📅 **Active Slate Date:** {slate_dt} (Only showing games tipping off on this date)")
         edge_rows = []
         for _, row in odds_df.iterrows():
             p_name = row["PLAYER_NAME"]
