@@ -239,6 +239,7 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
             cat_mult *= 0.82
 
     win_prob = 50.0 + ((win_prob - 50.0) * cat_mult)
+    is_promo = (line < raw_model_proj * 0.85)
     prob_cap = 78.0 if is_promo else 66.5
     win_prob = max(50.5, min(prob_cap, win_prob))
     if is_promo:
