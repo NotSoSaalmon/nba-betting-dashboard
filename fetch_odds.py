@@ -35,7 +35,7 @@ if g_resp.status_code == 200:
             break
         game_env[eid] = {"GAME_TOTAL": total_val, "SPREAD": spread_val}
 
-# 2. Fetch Player Props
+# 2. Fetch Player Props from PrizePicks (us_dfs) + DraftKings/FanDuel fallback
 events_url = s.join([host, "v4", "sports", "basketball_nba", "events"])
 resp = requests.get(events_url, params={"apiKey": API_KEY}, timeout=15)
 if resp.status_code != 200:
@@ -43,7 +43,7 @@ if resp.status_code != 200:
     exit()
 
 events = resp.json()
-print(f"Found {len(events)} NBA games. Fetching player props + game environments...")
+print(f"Found {len(events)} NBA games. Fetching PrizePicks + sportsbook lines...")
 
 rows = []
 market_map = {"player_points": "PTS", "player_rebounds": "REB", "player_assists": "AST"}
@@ -57,9 +57,9 @@ for event in events:
     props_url = s.join([host, "v4", "sports", "basketball_nba", "events", event_id, "odds"])
     p_resp = requests.get(props_url, params={
         "apiKey": API_KEY,
-        "regions": "us",
+        "regions": "us_dfs,us",
         "markets": "player_points,player_rebounds,player_assists",
-        "bookmakers": "draftkings,fanduel",
+        "bookmakers": "prizepicks,draftkings,fanduel",
         "oddsFormat": "american"
     }, timeout=15)
     if p_resp.status_code != 200:
@@ -67,7 +67,11 @@ for event in events:
 
     data = p_resp.json()
     for book in data.get("bookmakers", []):
+        book_key = book["key"]
         book_name = book["title"]
+        # Priority 0 = PrizePicks, Priority 1 = DraftKings/FanDuel fallback
+        priority = 0 if book_key == "prizepicks" else 1
+
         for market in book.get("markets", []):
             stat_code = market_map.get(market["key"])
             for outcome in market.get("outcomes", []):
@@ -77,6 +81,7 @@ for event in events:
                         "STAT": stat_code,
                         "LINE": outcome["point"],
                         "BOOK": book_name,
+                        "_priority": priority,
                         "HOME_TEAM": home_team,
                         "AWAY_TEAM": away_team,
                         "GAME_TOTAL": env["GAME_TOTAL"],
@@ -85,6 +90,10 @@ for event in events:
 
 odds_df = pd.DataFrame(rows)
 if not odds_df.empty:
-    odds_df = odds_df.drop_duplicates(subset=["PLAYER_NAME", "STAT"])
+    # Sort so PrizePicks always comes first when deduplicating
+    odds_df = odds_df.sort_values(by="_priority").drop_duplicates(subset=["PLAYER_NAME", "STAT"]).drop(columns=["_priority"])
     odds_df.to_csv("/Users/rasheedwhiters/nba_project/live_odds.csv", index=False)
-    print(f"Saved {len(odds_df)} live props with Vegas totals & spreads!")
+    pp_count = (odds_df["BOOK"] == "PrizePicks").sum()
+    print(f"Saved {len(odds_df)} live props ({pp_count} from PrizePicks) to live_odds.csv!")
+else:
+    print("No player props posted yet for today's slate.")
