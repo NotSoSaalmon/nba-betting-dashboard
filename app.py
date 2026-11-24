@@ -19,8 +19,8 @@ with tab_nba:
         selected_out = st.multiselect("Players Ruled OUT Tonight:", options=all_names, default=default_out)
     out_players_set = set(selected_out)
 
-    st.header("🔥 NBA Top 15 Picks (Top 5 PTS • Top 5 REB • Top 5 AST)")
-    stat_filter = st.radio("Filter NBA Leaderboard:", ["Balanced Top 15 (5 Each)", "All Combined", "PTS Only", "REB Only", "AST Only"], horizontal=True)
+    st.header("🔥 NBA Top 16 Picks (4 PTS • 4 REB • 4 AST • 4 PRA)")
+    stat_filter = st.radio("Filter NBA Leaderboard:", ["Balanced Top 16 (4 Each)", "All Combined", "PTS Only", "REB Only", "AST Only", "PRA Only"], horizontal=True)
 
     try:
         odds_df = pd.read_csv("live_odds.csv")
@@ -63,9 +63,9 @@ with tab_nba:
 
         if edge_rows:
             full_df = pd.DataFrame(edge_rows).sort_values(by="_sort", ascending=False)
-            if stat_filter == "Balanced Top 15 (5 Each)":
-                disp = pd.concat([full_df[full_df["Stat"] == s].head(5) for s in ["PTS", "REB", "AST"]]).sort_values(by="_sort", ascending=False)
-            elif stat_filter in ["PTS Only", "REB Only", "AST Only"]:
+            if stat_filter == "Balanced Top 16 (4 Each)":
+                disp = pd.concat([full_df[full_df["Stat"] == s].head(4) for s in ["PTS", "REB", "AST"]]).sort_values(by="_sort", ascending=False)
+            elif stat_filter in ["PTS Only", "REB Only", "AST Only", "PRA Only"]:
                 disp = full_df[full_df["Stat"] == next(iter(stat_filter.split(" ")))].head(15)
             else:
                 disp = full_df.head(15)
@@ -93,7 +93,7 @@ with tab_nba:
             with open("model_weights.json", "r") as wf:
                 w_data = json.load(wf)
             cat_rows = []
-            for s in ["PTS", "REB", "AST"]:
+            for s in ["PTS", "REB", "AST", "PRA"]:
                 for side in ["OVER", "UNDER"]:
                     sub = graded[(graded["Stat"] == s) & (graded["Pick"] == side)]
                     cw, cl = (sub["Result"] == "WIN").sum(), (sub["Result"] == "LOSS").sum()

@@ -58,7 +58,7 @@ for ev in resp.json():
 print(f"Found {len(todays_events)} NBA games scheduled specifically for {today_str}.")
 
 rows = []
-market_map = {"player_points": "PTS", "player_rebounds": "REB", "player_assists": "AST"}
+market_map = {"player_points": "PTS", "player_rebounds": "REB", "player_assists": "AST", "player_points_rebounds_assists": "PRA"}
 
 for event in todays_events:
     event_id = event["id"]
@@ -70,7 +70,7 @@ for event in todays_events:
     p_resp = requests.get(props_url, params={
         "apiKey": API_KEY,
         "regions": "us_dfs,us",
-        "markets": "player_points,player_rebounds,player_assists",
+        "markets": "player_points,player_rebounds,player_assists,player_points_rebounds_assists",
         "bookmakers": "prizepicks,draftkings,fanduel",
         "oddsFormat": "american"
     }, timeout=15)

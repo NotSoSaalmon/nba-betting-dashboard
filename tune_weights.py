@@ -21,7 +21,7 @@ if os.path.exists(HISTORY_FILE):
     weights["sample_size"] = int(len(graded))
 
     if len(graded) >= 15:
-        for stat in ["PTS", "REB", "AST"]:
+        for stat in ["PTS", "REB", "AST", "PRA"]:
             for side in ["OVER", "UNDER"]:
                 sub = graded[(graded["Stat"] == stat) & (graded["Pick"] == side)]
                 if len(sub) >= 10:

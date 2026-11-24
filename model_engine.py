@@ -37,6 +37,7 @@ def load_all_data(base_path=""):
 
     all_players_df["GAME_DATE"] = pd.to_datetime(all_players_df["GAME_DATE"])
     all_players_df["MIN"] = pd.to_numeric(all_players_df["MIN"], errors="coerce").fillna(0)
+    all_players_df["PRA"] = all_players_df["PTS"] + all_players_df["REB"] + all_players_df["AST"]
     all_players_df = all_players_df.sort_values(by="GAME_DATE", ascending=False)
 
     pos_map = dict(zip(pos_df["PLAYER_NAME"], pos_df["POS"]))
@@ -44,15 +45,15 @@ def load_all_data(base_path=""):
     all_players_df["OPP_ABBR"] = all_players_df["MATCHUP"].apply(lambda x: str(x).split(" ")[-1])
 
     dvp_logs = all_players_df[all_players_df["MIN"] >= 15].copy()
-    dvp_grouped = dvp_logs.groupby(["OPP_ABBR", "POS"])[["MIN", "PTS", "REB", "AST"]].sum().reset_index()
-    for s in ["PTS", "REB", "AST"]:
+    dvp_grouped = dvp_logs.groupby(["OPP_ABBR", "POS"])[["MIN", "PTS", "REB", "AST", "PRA"]].sum().reset_index()
+    for s in ["PTS", "REB", "AST", "PRA"]:
         dvp_grouped[f"{s}_PER_MIN"] = dvp_grouped[s] / dvp_grouped["MIN"]
 
-    league_pos_avg = dvp_logs.groupby("POS")[["MIN", "PTS", "REB", "AST"]].sum().reset_index()
-    for s in ["PTS", "REB", "AST"]:
+    league_pos_avg = dvp_logs.groupby("POS")[["MIN", "PTS", "REB", "AST", "PRA"]].sum().reset_index()
+    for s in ["PTS", "REB", "AST", "PRA"]:
         league_pos_avg[f"LG_{s}_PER_MIN"] = league_pos_avg[s] / league_pos_avg["MIN"]
 
-    dvp_table = pd.merge(dvp_grouped, league_pos_avg[["POS", "LG_PTS_PER_MIN", "LG_REB_PER_MIN", "LG_AST_PER_MIN"]], on="POS")
+    dvp_table = pd.merge(dvp_grouped, league_pos_avg[["POS", "LG_PTS_PER_MIN", "LG_REB_PER_MIN", "LG_AST_PER_MIN", "LG_PRA_PER_MIN"]], on="POS")
 
     return all_players_df, teams_df, shot_df, track_df, dvp_table, inj_df
 
@@ -117,6 +118,8 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
             expected_ast = tr["POTENTIAL_AST"] * 0.52
             baseline = (baseline * 0.70) + (expected_ast * 0.30)
             opp_volume_note = f"{tr['POTENTIAL_AST']:.1f} Pot Ast/g"
+        elif stat == "PRA" and (tr["REB_CHANCES"] > 0 or tr["POTENTIAL_AST"] > 0):
+            opp_volume_note = f"{tr['REB_CHANCES']:.1f} RebCh / {tr['POTENTIAL_AST']:.1f} PotAst"
 
     split_df = valid_df[valid_df["MATCHUP"].str.contains("vs." if is_home else "@", na=False)]
     if len(split_df) >= 3:
@@ -137,8 +140,12 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
             stat_diff = (opp_stats["OPP_PTS"] / teams_df["OPP_PTS"].mean()) - 1.0
         elif stat == "REB":
             stat_diff = (opp_stats["OPP_REB"] / teams_df["OPP_REB"].mean()) - 1.0
-        else:
+        elif stat == "AST":
             stat_diff = (opp_stats["OPP_AST"] / teams_df["OPP_AST"].mean()) - 1.0
+        else:
+            opp_pra = opp_stats["OPP_PTS"] + opp_stats["OPP_REB"] + opp_stats["OPP_AST"]
+            lg_pra = (teams_df["OPP_PTS"] + teams_df["OPP_REB"] + teams_df["OPP_AST"]).mean()
+            stat_diff = (opp_pra / lg_pra) - 1.0
         adj_pct += (pace_diff * 0.30) + (stat_diff * 0.25)
 
     dvp_row = dvp_table[(dvp_table["OPP_ABBR"] == opp_abbr) & (dvp_table["POS"] == player_pos)]
@@ -210,7 +217,7 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
     else:
         final_proj = (raw_model_proj * 0.55) + (line * 0.45)
 
-    min_std_floors = {"PTS": 5.5, "REB": 2.6, "AST": 2.1}
+    min_std_floors = {"PTS": 5.5, "REB": 2.6, "AST": 2.1, "PRA": 7.0}
     season_std = valid_df[stat].std()
     floor_std = max(min_std_floors.get(stat, 2.5), line * 0.24)
     std_dev = floor_std if pd.isna(season_std) else max(season_std, floor_std)
