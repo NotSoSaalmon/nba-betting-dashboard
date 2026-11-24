@@ -205,7 +205,7 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
 
     raw_model_proj = raw_model_proj * (1.0 + w_data.get("global_bias_adj", 0.0))
     # Detect PrizePicks promo discounts (line is >15% below raw projection)
-    if line < raw_model_proj * 0.85:
+    if (stat == "PTS" and line >= 12.5 and line <= valid_df.head(10)["PTS"].mean() * 0.80 and (valid_df.head(10)["PTS"].mean() - line) >= 3.5):
         final_proj = raw_model_proj
     else:
         final_proj = (raw_model_proj * 0.55) + (line * 0.45)
@@ -239,7 +239,7 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
             cat_mult *= 0.82
 
     win_prob = 50.0 + ((win_prob - 50.0) * cat_mult)
-    is_promo = (line < raw_model_proj * 0.85)
+    is_promo = ((stat == "PTS" and line >= 12.5 and line <= valid_df.head(10)["PTS"].mean() * 0.80 and (valid_df.head(10)["PTS"].mean() - line) >= 3.5))
     prob_cap = 78.0 if is_promo else 66.5
     win_prob = max(50.5, min(prob_cap, win_prob))
     if is_promo:
