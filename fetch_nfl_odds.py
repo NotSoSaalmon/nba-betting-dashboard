@@ -1,11 +1,14 @@
 import requests
 import pandas as pd
 import tomllib
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
-# Only fetch NFL odds on Thursday (3), Sunday (6), or Monday (0) to save API credits
-if datetime.now().weekday() not in:
-    print("Not an NFL game day (Thu/Sun/Mon) — skipping NFL odds to save API credits.")
+now_local = datetime.now()
+weekday = now_local.weekday()  # Mon=0, Tue=1, Wed=2, Thu=3, Fri=4, Sat=5, Sun=6
+
+# Only run on Monday (0), Thursday (3), or Sunday (6)
+if weekday not in (0, 3, 6):
+    print("Not Mon/Thu/Sun — skipping NFL odds to save API credits.")
     exit()
 
 with open("/Users/rasheedwhiters/nba_project/.streamlit/secrets.toml", "rb") as f:
@@ -16,7 +19,34 @@ s = chr(47)
 domain = ".".join(["api", "the-odds-api", "com"])
 host = "https:" + s + s + domain
 
-# 1. Fetch NFL Game Totals & Spreads
+# 1. Check upcoming NFL events (0 API credits)
+events_url = s.join([host, "v4", "sports", "americanfootball_nfl", "events"])
+resp = requests.get(events_url, params={"apiKey": API_KEY}, timeout=15)
+if resp.status_code != 200:
+    print(f"NFL API Error {resp.status_code}: {resp.text}")
+    exit()
+
+all_events = resp.json()
+
+# On Mondays, allow games kicking off within the next 65 hours (covers Mon, Tue, and Wed games)
+# On Thursdays/Sundays, only fetch games kicking off within the next 28 hours (that day's slate)
+window_hours = 65 if weekday == 0 else 28
+now_utc = datetime.now(timezone.utc)
+cutoff_utc = now_utc + timedelta(hours=window_hours)
+
+target_events = []
+for ev in all_events:
+    kickoff = datetime.fromisoformat(ev["commence_time"].replace("Z", "+00:00"))
+    if now_utc - timedelta(hours=2) <= kickoff <= cutoff_utc:
+        target_events.append(ev)
+
+if not target_events:
+    print("No NFL games found in today's window.")
+    exit()
+
+print(f"Found {len(target_events)} NFL game(s) in window (including any Tue/Wed games on Mondays)...")
+
+# 2. Fetch NFL Game Totals
 g_url = s.join([host, "v4", "sports", "americanfootball_nfl", "odds"])
 g_resp = requests.get(g_url, params={
     "apiKey": API_KEY, "regions": "us", "markets": "totals", "bookmakers": "draftkings,fanduel"
@@ -31,13 +61,7 @@ if g_resp.status_code == 200:
                     game_totals[g["id"]] = next(iter(m["outcomes"]))["point"]
             break
 
-# 2. Fetch NFL PrizePicks Player Props
-events_url = s.join([host, "v4", "sports", "americanfootball_nfl", "events"])
-resp = requests.get(events_url, params={"apiKey": API_KEY}, timeout=15)
-if resp.status_code != 200:
-    print(f"NFL API Error {resp.status_code}: {resp.text}")
-    exit()
-
+# 3. Fetch PrizePicks Player Props for target games
 rows = []
 market_map = {
     "player_pass_yds": "PASS_YDS",
@@ -45,9 +69,10 @@ market_map = {
     "player_reception_yds": "REC_YDS"
 }
 
-for event in resp.json():
+for event in target_events:
     eid = event["id"]
     total_pts = game_totals.get(eid, 44.5)
+    game_day = datetime.fromisoformat(event["commence_time"].replace("Z", "+00:00")).strftime("%a %m/%d")
     props_url = s.join([host, "v4", "sports", "americanfootball_nfl", "events", eid, "odds"])
     p_resp = requests.get(props_url, params={
         "apiKey": API_KEY,
@@ -71,6 +96,7 @@ for event in resp.json():
                         "LINE": o["point"],
                         "BOOK": book["title"],
                         "_prio": prio,
+                        "GAME_DAY": game_day,
                         "HOME_TEAM": event["home_team"],
                         "AWAY_TEAM": event["away_team"],
                         "GAME_TOTAL": total_pts
