@@ -141,17 +141,4 @@ with tab_nfl:
     else:
         st.info("NFL PrizePicks lines automatically load on **Thursdays, Sundays, and Mondays** at 5:00 AM (saving API credits on Tue/Wed/Fri/Sat).")
 
-cat << 'EOF' > ~/nba_project/daily_update.sh
-#!/bin/bash
-cd /Users/rasheedwhiters/nba_project
-/Users/rasheedwhiters/nba_project/venv/bin/python fetch_betting_data.py
-/Users/rasheedwhiters/nba_project/venv/bin/python fetch_injuries.py
-/Users/rasheedwhiters/nba_project/venv/bin/python fetch_odds.py
-/Users/rasheedwhiters/nba_project/venv/bin/python grade_picks.py
-/Users/rasheedwhiters/nba_project/venv/bin/python tune_weights.py
-/Users/rasheedwhiters/nba_project/venv/bin/python fetch_nfl_data.py
-/Users/rasheedwhiters/nba_project/venv/bin/python fetch_nfl_odds.py
 
-git add *.csv *.json *.py
-git commit -m "Daily 5AM NBA & NFL data refresh"
-git push origin main
