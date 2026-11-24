@@ -161,7 +161,7 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
     shot_label = "Standard"
     if not p_shot.empty and not opp_row.empty:
         ps = p_shot.squeeze()
-        os = opp_row.squeeze()
+        opp_s = opp_row.squeeze()
         pct_3, pct_2 = ps["PCT_PTS_3PT"], ps["PCT_PTS_2PT"]
         if pct_3 >= 0.42:
             style = f"3PT ({pct_3*100:.0f}%)"
@@ -171,8 +171,8 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
             style = f"Balanced ({pct_2*100:.0f}% 2P)"
 
         if stat == "PTS":
-            ratio_3 = os["OPP_FG3M"] / teams_df["OPP_FG3M"].mean()
-            ratio_2 = os["OPP_FG2M"] / teams_df["OPP_FG2M"].mean()
+            ratio_3 = opp_s["OPP_FG3M"] / teams_df["OPP_FG3M"].mean()
+            ratio_2 = opp_s["OPP_FG2M"] / teams_df["OPP_FG2M"].mean()
             total_fg = pct_3 + pct_2
             w_ratio = ((pct_3 * ratio_3) + (pct_2 * ratio_2)) / total_fg if total_fg > 0 else 1.0
             adj_pct += (w_ratio - 1.0) * 0.40
