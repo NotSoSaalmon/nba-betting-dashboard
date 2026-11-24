@@ -1,10 +1,18 @@
 {
-  "PTS_OVER": 1.0488,
-  "PTS_UNDER": 1.0231,
-  "REB_OVER": 0.9937,
-  "REB_UNDER": 1.0856,
-  "AST_OVER": 1.0023,
-  "AST_UNDER": 1.1091,
+  "PTS_OVER": 1.0215,
+  "PTS_UNDER": 0.9851,
+  "REB_OVER": 0.9435,
+  "REB_UNDER": 1.0737,
+  "AST_OVER": 0.9556,
+  "AST_UNDER": 1.107,
+  "win_rates": {
+    "PTS_OVER": 60.5,
+    "PTS_UNDER": 56.2,
+    "REB_OVER": 51.4,
+    "REB_UNDER": 66.7,
+    "AST_OVER": 52.8,
+    "AST_UNDER": 70.6
+  },
   "global_bias_adj": -0.0004,
   "sample_size": 162
 }

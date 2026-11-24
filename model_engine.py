@@ -220,8 +220,20 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
         lean = "UNDER"
         win_prob = (1.0 - prob_over) * 100
 
-    cat_mult = w_data.get(f"{stat}_{lean}", 1.0)
-    # Apply learned category confidence multiplier to edge over 50%
+    cat_key = f"{stat}_{lean}"
+    cat_mult = w_data.get(cat_key, 1.0)
+    cat_wr = w_data.get("win_rates", {}).get(cat_key, 60.0)
+
+    # Extra strict quality gate for categories currently under 60% win rate
+    if cat_wr < 60.0:
+        l10_vals = l10[stat]
+        l10_med = l10_vals.median()
+        l10_hits = (l10_vals > line).sum() if lean == "OVER" else (l10_vals < line).sum()
+        med_agrees = (l10_med > line) if lean == "OVER" else (l10_med < line)
+        # Penalize probability if L10 hit rate is below 6/10 or median disagrees
+        if l10_hits < 6 or not med_agrees:
+            cat_mult *= 0.82
+
     win_prob = 50.0 + ((win_prob - 50.0) * cat_mult)
     win_prob = max(50.5, min(66.5, win_prob))
     pct_edge = ((final_proj - line) / line) * 100 if line > 0 else 0
