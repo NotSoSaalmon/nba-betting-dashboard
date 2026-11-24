@@ -239,6 +239,9 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
             cat_mult *= 0.82
 
     win_prob = 50.0 + ((win_prob - 50.0) * cat_mult)
-    win_prob = max(50.5, min(66.5, win_prob))
+    prob_cap = 78.0 if is_promo else 66.5
+    win_prob = max(50.5, min(prob_cap, win_prob))
+    if is_promo:
+        usage_note = f"🏷️ PROMO {usage_note}".strip()
     pct_edge = ((final_proj - line) / line) * 100 if line > 0 else 0
     return final_proj, lean, win_prob, pct_edge, is_b2b, round(proj_min, 1), player_pos, dvp_label, shot_label, usage_note
