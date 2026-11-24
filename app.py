@@ -63,7 +63,7 @@ with tab_nba:
             if stat_filter == "Balanced Top 15 (5 Each)":
                 disp = pd.concat([full_df[full_df["Stat"] == s].head(5) for s in ["PTS", "REB", "AST"]]).sort_values(by="_sort", ascending=False)
             elif stat_filter in ["PTS Only", "REB Only", "AST Only"]:
-                disp = full_df[full_df["Stat"] == stat_filter.split(" ")].head(15)
+                disp = full_df[full_df["Stat"] == next(iter(stat_filter.split(" ")))].head(15)
             else:
                 disp = full_df.head(15)
             st.dataframe(disp.drop(columns=["_sort"]), use_container_width=True, hide_index=True)
