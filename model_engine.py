@@ -204,7 +204,11 @@ def calculate_projection(p_df, all_players_df, player_name, stat, opp_name, line
             w_data = json.load(wf)
 
     raw_model_proj = raw_model_proj * (1.0 + w_data.get("global_bias_adj", 0.0))
-    final_proj = (raw_model_proj * 0.55) + (line * 0.45)
+    # Detect PrizePicks promo discounts (line is >15% below raw projection)
+    if line < raw_model_proj * 0.85:
+        final_proj = raw_model_proj
+    else:
+        final_proj = (raw_model_proj * 0.55) + (line * 0.45)
 
     min_std_floors = {"PTS": 5.5, "REB": 2.6, "AST": 2.1}
     season_std = valid_df[stat].std()
