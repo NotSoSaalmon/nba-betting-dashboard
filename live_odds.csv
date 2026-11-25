@@ -1,151 +1,226 @@
 FETCH_DATE,PLAYER_NAME,STAT,LINE,BOOK,HOME_TEAM,AWAY_TEAM,GAME_TOTAL,SPREAD
-2026-11-24,Zaccharie Risacher,REB,3.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Anthony Black,PRA,23.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Wendell Carter Jr,PRA,20.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Jalen Suggs,PRA,19.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Paul Reed Jr,PRA,19.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Kevin Huerter,PRA,17.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,John Collins,PRA,17.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Tristan da Silva,PRA,15.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Isaiah Joe,PRA,15.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Daniss Jenkins,PRA,23.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Wendell Carter Jr,REB,8.0,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,John Collins,REB,5.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Anthony Black,REB,4.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Desmond Bane,REB,3.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Tristan da Silva,REB,3.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Javonte Green,REB,2.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Isaiah Joe,REB,2.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Ausar Thompson,REB,8.0,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Paul Reed Jr,REB,7.0,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Franz Wagner,REB,6.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Cade Cunningham,REB,5.0,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Ausar Thompson,PRA,23.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Franz Wagner,PRA,36.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Daniss Jenkins,AST,4.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Anthony Black,AST,4.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Kevin Huerter,AST,2.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Cade Cunningham,PTS,25.0,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Franz Wagner,PTS,23.0,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Desmond Bane,PTS,17.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Daniss Jenkins,PTS,15.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Anthony Black,PTS,14.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Desmond Bane,PRA,24.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Kevin Huerter,PTS,11.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Isaiah Joe,PTS,11.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,John Collins,PTS,10.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Ausar Thompson,PTS,10.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Wendell Carter Jr,PTS,10.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Paul Reed Jr,PTS,9.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Javonte Green,PTS,5.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Goga Bitadze,PTS,4.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Cade Cunningham,PRA,38.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Jalen Suggs,PTS,11.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Franz Wagner,AST,6.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Daniss Jenkins,REB,4.0,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Kyshawn George,REB,4.0,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Cameron Johnson,REB,3.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Sam Hauser,PTS,7.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Alex Sarr,PTS,9.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Neemias Queta,PTS,10.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Payton Pritchard,PTS,13.0,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Derrick White,PTS,13.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Kyshawn George,PTS,14.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Trae Young,PTS,14.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Bilal Coulibaly,PTS,6.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,AJ Dybantsa,PTS,15.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Anthony Davis,PTS,21.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Jayson Tatum,PTS,25.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Kyshawn George,AST,4.0,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Paul George,AST,3.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Derrick White,AST,4.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Jayson Tatum,AST,6.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Trae Young,AST,7.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Paul George,PTS,18.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Jalen Suggs,REB,4.0,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Hugo Gonzalez,PTS,5.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Anthony Davis,PRA,33.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Hugo Gonzalez,REB,3.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Bilal Coulibaly,REB,3.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Paul George,REB,5.0,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Alex Sarr,REB,6.0,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,AJ Dybantsa,REB,6.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Jayson Tatum,REB,7.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Neemias Queta,REB,9.0,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Anthony Davis,REB,10.0,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Jayson Tatum,PRA,40.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Sam Hauser,PRA,10.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Alex Sarr,PRA,17.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Payton Pritchard,PRA,20.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Derrick White,PRA,21.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Neemias Queta,PRA,22.0,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Kyshawn George,PRA,23.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Trae Young,PRA,24.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,AJ Dybantsa,PRA,25.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Paul George,PRA,28.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Bilal Coulibaly,PRA,11.5,PrizePicks,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Cade Cunningham,AST,8.0,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Tristan da Silva,PTS,10.5,PrizePicks,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Naji Marshall,PTS,10.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Caleb Martin,PTS,5.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Morez Johnson Jr.,PTS,6.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Zaccharie Risacher,PTS,7.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Walter Clayton Jr.,PTS,8.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Daniel Gafford,PTS,9.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,DeMar DeRozan,PTS,10.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Cameron Johnson,PTS,12.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Christian Braun,PTS,12.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,P.J. Washington,PTS,12.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Aaron Gordon,PTS,13.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Kyrie Irving,PTS,22.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Jamal Murray,PTS,22.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Cooper Flagg,PTS,24.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Nikola Jokic,PTS,25.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Walter Clayton Jr.,AST,3.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Jamal Murray,AST,6.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Nikola Jokic,AST,9.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Cooper Flagg,PRA,37.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Jamal Murray,PRA,34.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Nikola Jokic,PRA,47.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Aaron Gordon,PRA,21.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Kyrie Irving,REB,3.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Christian Braun,REB,4.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Morez Johnson Jr.,REB,4.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Daniel Gafford,REB,7.0,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Kyrie Irving,PRA,31.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Caleb Martin,PRA,11.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Morez Johnson Jr.,PRA,12.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Zaccharie Risacher,PRA,13.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Nikola Jokic,REB,12.0,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Walter Clayton Jr.,PRA,13.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,DeMar DeRozan,PRA,14.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Naji Marshall,PRA,16.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,P.J. Washington,PRA,18.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Cameron Johnson,PRA,18.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Daniel Gafford,PRA,18.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Christian Braun,PRA,20.5,PrizePicks,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Aaron Gordon,AST,2.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Daniel Gafford,AST,1.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Christian Braun,AST,2.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Naji Marshall,AST,2.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Cooper Flagg,REB,6.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Cooper Flagg,AST,6.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Naji Marshall,REB,2.5,FanDuel,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Trae Young,REB,2.5,FanDuel,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Kyrie Irving,AST,4.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Derrick White,REB,3.5,FanDuel,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Caleb Martin,REB,3.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Jamal Murray,REB,4.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,P.J. Washington,REB,5.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Aaron Gordon,REB,5.5,DraftKings,Denver Nuggets,Dallas Mavericks,234.5,8.5
-2026-11-24,Ausar Thompson,AST,4.5,FanDuel,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Tristan da Silva,AST,1.5,DraftKings,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Wendell Carter Jr,AST,1.5,DraftKings,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Jalen Suggs,AST,3.5,DraftKings,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Desmond Bane,AST,2.5,DraftKings,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,Kevin Huerter,REB,3.5,FanDuel,Orlando Magic,Detroit Pistons,212.5,2.5
-2026-11-24,AJ Dybantsa,AST,2.5,FanDuel,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Payton Pritchard,AST,4.5,FanDuel,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Anthony Davis,AST,1.5,FanDuel,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Payton Pritchard,REB,2.5,DraftKings,Washington Wizards,Boston Celtics,218.5,10.5
-2026-11-24,Sam Hauser,REB,3.5,DraftKings,Washington Wizards,Boston Celtics,218.5,10.5
+2026-11-25,Donovan Mitchell,PTS,25.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,James Harden,REB,4.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Meleek Thomas,REB,2.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Tyrese Proctor,REB,2.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Ajay Mitchell,AST,3.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Isaiah Hartenstein,AST,3.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jonathan Kuminga,AST,2.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jared McCain,AST,1.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Kenrich Williams,AST,1.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Rudy Gobert,AST,1.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Shai Gilgeous-Alexander,PTS,31.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,LaMelo Ball,PTS,18.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Ajay Mitchell,PTS,17.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Ayo Dosunmu,PTS,17.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jaden McDaniels,PTS,17.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jared McCain,PTS,15.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jonathan Kuminga,PTS,14.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Terrence Shannon Jr.,PTS,11.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Isaiah Hartenstein,PTS,9.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Rudy Gobert,PTS,8.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Kenrich Williams,PTS,8.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Alex Caruso,PTS,6.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Trey Lyles,PTS,5.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Shai Gilgeous-Alexander,PRA,41.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,LaMelo Ball,PRA,29.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jaden McDaniels,PRA,26.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Ayo Dosunmu,PRA,26.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Ajay Mitchell,PRA,25.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Donovan Mitchell,REB,4.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Isaiah Hartenstein,PRA,23.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Josh Hart,REB,7.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Meleek Thomas,PRA,12.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Donovan Mitchell,AST,4.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Josh Hart,AST,4.0,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Karl-Anthony Towns,AST,3.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Jarrett Allen,AST,1.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Peyton Watson,AST,1.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Jalen Brunson,PTS,27.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Ryan Rollins,REB,3.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Karl-Anthony Towns,PTS,20.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,James Harden,PTS,16.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Jarrett Allen,PTS,12.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Landry Shamet,PTS,12.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Peyton Watson,PTS,11.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Mikal Bridges,PTS,10.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Josh Hart,PTS,9.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Sam Merrill,PTS,8.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Meleek Thomas,PTS,7.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Tyrese Proctor,PTS,7.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Jalen Brunson,PRA,38.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Karl-Anthony Towns,PRA,37.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Donovan Mitchell,PRA,34.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,James Harden,PRA,28.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Jarrett Allen,PRA,23.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Josh Hart,PRA,21.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Peyton Watson,PRA,17.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Mikal Bridges,PRA,16.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Landry Shamet,PRA,16.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Sam Merrill,PRA,12.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Tyrese Proctor,PRA,11.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,James Harden,AST,6.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Jonathan Kuminga,PRA,22.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Rudy Gobert,PRA,20.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Myles Turner,PTS,9.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Kel'el Ware,PTS,8.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Noah Clowney,PTS,8.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Nate Ament,PTS,6.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Tyler Herro,PRA,34.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Julius Randle,PRA,33.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Michael Porter Jr,PRA,30.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Mikel Brown Jr.,PRA,24.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Day'Ron Sharpe,PRA,24.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Kyle Kuzma,PRA,23.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Ryan Rollins,PRA,21.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Brayden Burries,PRA,21.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Jaime Jaquez Jr,PRA,20.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Danny Wolf,PRA,18.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Egor Demin,PRA,17.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Myles Turner,PRA,17.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Kel'el Ware,PRA,16.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Noah Clowney,PRA,14.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Nate Ament,PRA,10.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Day'Ron Sharpe,REB,8.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Michael Porter Jr,REB,7.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Julius Randle,REB,6.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Kel'el Ware,REB,6.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Myles Turner,REB,5.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Brayden Burries,REB,5.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Jaime Jaquez Jr,REB,4.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Tyler Herro,REB,4.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Danny Wolf,PTS,9.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Jared McCain,PRA,20.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Day'Ron Sharpe,PTS,10.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Jaime Jaquez Jr,PTS,12.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Terrence Shannon Jr.,PRA,17.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Kenrich Williams,PRA,16.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Joan Beringer,PRA,11.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Alex Caruso,PRA,11.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Trey Lyles,PRA,9.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Rudy Gobert,REB,10.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jaden McDaniels,REB,5.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jonathan Kuminga,REB,5.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Joan Beringer,REB,5.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Shai Gilgeous-Alexander,REB,4.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jared McCain,REB,3.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Trey Lyles,REB,3.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Alex Caruso,REB,2.5,PrizePicks,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Tyler Herro,AST,5.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Julius Randle,AST,5.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Ryan Rollins,AST,4.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Mikel Brown Jr.,AST,4.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Day'Ron Sharpe,AST,4.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Jaime Jaquez Jr,AST,3.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Kyle Kuzma,AST,2.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Egor Demin,AST,2.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Tyler Herro,PTS,23.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Julius Randle,PTS,21.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Michael Porter Jr,PTS,20.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Mikel Brown Jr.,PTS,16.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Kyle Kuzma,PTS,15.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Brayden Burries,PTS,12.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Egor Demin,PTS,11.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Jalen Brunson,AST,6.5,PrizePicks,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Mikel Brown Jr.,REB,2.5,PrizePicks,Milwaukee Bucks,Brooklyn Nets,231.5,1.5
+2026-11-25,Buddy Hield,PRA,20.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Giannis Antetokounmpo,PTS,29.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Jaylen Brown,AST,3.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Tyrese Maxey,AST,5.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,LeBron James,AST,6.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Davion Mitchell,AST,8.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Naz Reid,AST,2.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Brandon Miller,AST,3.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Tyrese Maxey,REB,3.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Pelle Larsson,REB,3.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Tyrese Maxey,PTS,25.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Dean Wade,REB,4.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,VJ Edgecombe,REB,5.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,LeBron James,REB,6.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Bam Adebayo,REB,8.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Dean Wade,PRA,11.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Anfernee Simons,PRA,12.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Jabari Walker,PRA,14.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Klay Thompson,PRA,16.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Pelle Larsson,PRA,19.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,VJ Edgecombe,PRA,23.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Jabari Walker,REB,5.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Jaylen Brown,PTS,22.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Bam Adebayo,PTS,18.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,LeBron James,PTS,18.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Matas Buzelis,PTS,16.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Jalen Smith,PTS,13.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Buddy Hield,PTS,13.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Josh Giddey,PTS,12.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Grayson Allen,PTS,12.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Sion James,PTS,6.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Brandon Miller,PRA,30.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Naz Reid,PRA,30.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Josh Giddey,PRA,28.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Coby White,PRA,25.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Matas Buzelis,PRA,23.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Jalen Smith,PRA,23.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Moussa Diabate,PRA,22.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Brandon Miller,PTS,22.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Isaac Okoro,PRA,15.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Sion James,PRA,14.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Moussa Diabate,REB,10.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Jalen Smith,REB,6.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,VJ Edgecombe,PTS,13.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Klay Thompson,PTS,13.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Davion Mitchell,PTS,14.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Pelle Larsson,PTS,11.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Anfernee Simons,PTS,9.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Jabari Walker,PTS,7.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Giannis Antetokounmpo,PRA,47.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Brandon Miller,REB,4.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Coby White,PTS,17.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Davion Mitchell,PRA,27.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Naz Reid,PTS,19.5,PrizePicks,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Jaylen Brown,PRA,31.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,LeBron James,PRA,32.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Tyrese Maxey,PRA,34.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Bam Adebayo,PRA,30.5,PrizePicks,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,LaMelo Ball,AST,6.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Ayo Dosunmu,REB,4.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Isaiah Hartenstein,REB,11.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,LaMelo Ball,REB,4.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Ajay Mitchell,REB,3.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Kenrich Williams,REB,5.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Terrence Shannon Jr.,REB,3.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Jaylen Brown,REB,6.5,DraftKings,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Giannis Antetokounmpo,REB,12.5,DraftKings,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Bam Adebayo,AST,3.5,DraftKings,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Pelle Larsson,AST,3.5,DraftKings,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,VJ Edgecombe,AST,3.5,DraftKings,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Giannis Antetokounmpo,AST,5.5,DraftKings,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Ayo Dosunmu,AST,3.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Davion Mitchell,REB,3.5,DraftKings,Philadelphia 76ers,Miami Heat,237.5,1.5
+2026-11-25,Jaden McDaniels,AST,2.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Buddy Hield,REB,3.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Matas Buzelis,REB,4.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Grayson Allen,REB,2.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Josh Giddey,REB,6.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Naz Reid,REB,8.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Landry Shamet,AST,1.5,FanDuel,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Mikal Bridges,AST,2.5,FanDuel,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Coby White,REB,2.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Jalen Smith,AST,2.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Coby White,AST,3.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Moussa Diabate,AST,1.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Matas Buzelis,AST,1.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Buddy Hield,AST,1.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Josh Giddey,AST,8.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Isaac Okoro,AST,2.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Moussa Diabate,PTS,9.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Isaac Okoro,PTS,10.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Isaac Okoro,REB,2.5,FanDuel,Charlotte Hornets,Chicago Bulls,221.5,3.5
+2026-11-25,Terrence Shannon Jr.,AST,2.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Shai Gilgeous-Alexander,AST,5.5,FanDuel,Oklahoma City Thunder,Minnesota Timberwolves,223.5,1.5
+2026-11-25,Landry Shamet,REB,2.5,FanDuel,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Jalen Brunson,REB,3.5,FanDuel,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Jarrett Allen,REB,8.5,FanDuel,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Sam Merrill,REB,2.5,FanDuel,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Peyton Watson,REB,4.5,FanDuel,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Mikal Bridges,REB,2.5,FanDuel,New York Knicks,Cleveland Cavaliers,220.5,3.5
+2026-11-25,Karl-Anthony Towns,REB,12.5,FanDuel,New York Knicks,Cleveland Cavaliers,220.5,3.5
