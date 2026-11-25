@@ -14,7 +14,7 @@ domain = ".".join(["api", "the-odds-api", "com"])
 host = "https:" + s + s + domain
 
 local_tz = ZoneInfo("America/Chicago")
-offset_days = int(sys.argv) if len(sys.argv) > 1 else 0
+offset_days = int(sys.argv.pop()) if len(sys.argv) > 1 else 0
 target_date = (datetime.now(local_tz) + timedelta(days=offset_days)).strftime("%Y-%m-%d")
 
 # 1. Fetch Game Lines (Spreads & Totals)

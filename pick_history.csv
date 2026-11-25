@@ -1,18 +1,18 @@
 Date,Player,Opponent,Stat,Pick,Book Line,Model Proj,Win Prob %,Actual,Result
-2026-11-24,Franz Wagner,Detroit Pistons,PTS,OVER,22.5,26.6,66.5,,PENDING
+2026-11-24,Franz Wagner,Detroit Pistons,PTS,OVER,22.5,26.6,66.5,20.0,LOSS
 2026-11-24,Karl-Anthony Towns,Cleveland Cavaliers,PTS,OVER,20.5,23.2,66.5,,PENDING
-2026-11-24,Tristan da Silva,Detroit Pistons,PTS,OVER,10.5,13.1,66.5,,PENDING
-2026-11-24,Daniel Gafford,Denver Nuggets,REB,UNDER,7.5,5.9,66.5,,PENDING
-2026-11-24,Franz Wagner,Detroit Pistons,AST,OVER,6.5,8.2,66.5,,PENDING
-2026-11-24,Zaccharie Risacher,Denver Nuggets,REB,OVER,3.5,4.5,65.6,,PENDING
+2026-11-24,Tristan da Silva,Detroit Pistons,PTS,OVER,10.5,13.1,66.5,16.0,WIN
+2026-11-24,Daniel Gafford,Denver Nuggets,REB,UNDER,7.5,5.9,66.5,6.0,WIN
+2026-11-24,Franz Wagner,Detroit Pistons,AST,OVER,6.5,8.2,66.5,6.0,LOSS
+2026-11-24,Zaccharie Risacher,Denver Nuggets,REB,OVER,3.5,4.5,65.6,6.0,WIN
 2026-11-24,Karl-Anthony Towns,Cleveland Cavaliers,REB,OVER,12.5,13.7,65.2,,PENDING
-2026-11-24,Naji Marshall,Denver Nuggets,AST,OVER,2.5,3.3,63.9,,PENDING
+2026-11-24,Naji Marshall,Denver Nuggets,AST,OVER,2.5,3.3,63.9,2.0,LOSS
 2026-11-24,Davion Mitchell,Philadelphia 76ers,PTS,OVER,14.5,16.4,63.6,,PENDING
-2026-11-24,Tristan da Silva,Detroit Pistons,REB,OVER,3.5,4.4,63.3,,PENDING
+2026-11-24,Tristan da Silva,Detroit Pistons,REB,OVER,3.5,4.4,63.3,3.0,LOSS
 2026-11-24,Peyton Watson,New York Knicks,PTS,UNDER,11.5,9.7,62.9,,PENDING
-2026-11-24,Payton Pritchard,Washington Wizards,AST,OVER,3.5,4.2,62.7,,PENDING
+2026-11-24,Payton Pritchard,Washington Wizards,AST,OVER,3.5,4.2,62.7,2.0,LOSS
 2026-11-24,Karl-Anthony Towns,Cleveland Cavaliers,AST,OVER,3.5,4.2,62.3,,PENDING
-2026-11-24,Franz Wagner,Detroit Pistons,REB,OVER,6.5,7.3,62.0,,PENDING
+2026-11-24,Franz Wagner,Detroit Pistons,REB,OVER,6.5,7.3,62.0,9.0,WIN
 2026-11-24,James Harden,New York Knicks,AST,UNDER,6.5,6.0,60.0,,PENDING
 2026-11-23,Donovan Mitchell,Chicago Bulls,PTS,OVER,25.5,28.4,64.5,28.0,WIN
 2026-11-23,Devin Vassell,Sacramento Kings,PTS,OVER,10.5,12.5,64.2,16.0,WIN
